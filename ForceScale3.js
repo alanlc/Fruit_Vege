@@ -46,7 +46,12 @@ function createScale(data)
             y: 65,
             height: 100,
             width: 50,
+            id: "fats",
             class: "nutrient-bar-text"
+        })
+        .on
+        ({
+            click: mouseclick
         });
     
     bargroup = bars.append("g");
@@ -75,7 +80,12 @@ function createScale(data)
             y: 65,
             height: 100,
             width: 50,
+            id: "proteins",
             class: "nutrient-bar-text"
+        })
+        .on
+        ({
+            click: mouseclick
         });
     
     bargroup = bars.append("g");
@@ -105,7 +115,12 @@ function createScale(data)
             y: 65,
             height: 100,
             width: 50,
+            id: "carbohydrates",
             class: "nutrient-bar-text"
+        })
+        .on
+        ({
+            click: mouseclick
         });
 
     function mouseclick()
@@ -114,8 +129,8 @@ function createScale(data)
         {
             d3.selectAll(".nutrient-bar")
                 .attr("fill","steelblue");
-            
-            d3.select(this)
+            console.log(this.id);
+            d3.select("#" + this.id)
                 .transition()
                 .duration(100)
                 .attr("fill", "red");
