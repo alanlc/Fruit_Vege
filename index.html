@@ -1,0 +1,64 @@
+<html>
+<head>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+<style>
+    .force-scale 
+    {
+        height: 500px;
+        /*border: 1px solid red;*/
+        width: 700px;
+    }
+    .force-scale-node circle
+    {
+        stroke-width: 1.5px;
+    }
+    .force-text
+    {
+        font-family: Helvetica, sans-serif;
+        font-size: 32px;
+    }
+    
+    .dominant-nutrients div
+    {
+        font-family: Helvetica, sans-serif;
+        font-size: 32px;
+        background-color: #F5FAFF;
+        text-align: left;
+        padding: 3px;
+        margin: -1px;
+        color: #6666C2;
+        width: 475;
+        border: 1px solid #CCCCCC;
+    }
+    
+    .nutrient-bar
+    {
+        /*fill: steelblue;*/
+    }
+    .nutrient-bar-text
+    {
+        font-family: Helvetica, sans-serif;
+        font-size: 30px;
+        fill: black;
+    }
+    </style>
+</head>
+<body>
+</body>
+<script src = "ForceScale3.js"></script>
+<script src = "getDominantNutrients.js"></script>
+<script src = "getScale.js"></script>
+<script type = "text/javascript">
+
+    d3.json("fcpdata3.json", function(error, json) 
+    {
+        var data = json;
+        
+        createScale(data);
+        
+    });
+
+    
+
+</script>
+</html>
