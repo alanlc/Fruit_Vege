@@ -50,9 +50,9 @@ function getDominantNutrients(data,foodIndex)
         .selectAll("div")
         .data(exDatum)
         .enter().append("div")
-        .text(function(d,i) 
+        .html(function(d,i) 
         {
             if (i==0) return ("Main Nutrients: "+data[foodIndex].food +" (100g)");
-            else return (exDatum[i].nutrient + ": " + exDatum[i].amount + "g ")
+            else return (exDatum[i].nutrient + "<span class=\"nutrient-amount\">" + exDatum[i].amount + "g</span>")
         });
 }
