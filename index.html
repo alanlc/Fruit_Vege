@@ -3,6 +3,9 @@
     <title>Food Facts</title>
     <script src="http://d3js.org/d3.v3.min.js"></script>
 <style type="text/css">
+    * {
+      	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
     .force-scale 
     {
         height: 500px;
@@ -46,9 +49,35 @@
         -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* IE10+ */    
     }
+    #container {
+      display: inline-block;
+      width: 100%;
+    }
+    #display {
+      display:inline-block;
+      float: left;
+      width: 50%
+    }
+    #nutrients {
+      margin-top: 50px;
+      display:inline-block;
+      float: right;
+      width: 50%
+    }
     </style>
 </head>
 <body>
+  <div id="container">
+    <div id="display"></div>
+    <div id="nutrients"></div>
+  </div>
+  <div id="info">
+    <h4>Group Members:</h4>
+    <ul><li>Samuel Toussaint</li>
+      <li>Alan Chan</li>
+      <li>Zachary Diebold</li>
+    </ul>
+  </div>
 </body>
 <script src = "ForceScale3.js"></script>
 <script src = "getDominantNutrients.js"></script>

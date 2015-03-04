@@ -2,7 +2,7 @@ function createScale(data)
 {
     console.log(data);
     
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("#display").append("svg")
         .attr("class", "force-scale");
     var selection = 0;
     var yHeight = 300;

@@ -1,4 +1,4 @@
-var dNutrientChart = d3.select("body").append("div")
+var dNutrientChart = d3.select("#nutrients").append("div")
     .attr("class", "dominant-nutrients");
 
 //enter dummy data here to allow for indexing
