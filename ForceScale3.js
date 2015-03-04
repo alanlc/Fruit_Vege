@@ -129,7 +129,7 @@ function createScale(data)
         {
             d3.selectAll(".nutrient-bar")
                 .attr("fill","steelblue");
-            console.log(this.id);
+
             d3.select("#" + this.id)
                 .transition()
                 .duration(100)
