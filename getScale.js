@@ -1,9 +1,10 @@
 //function creates food scale based on the nutrient selection
-function getScale(data,svg,selection,yHeight)
-{
+function getScale(data, svg, selection) {
     var width = 700,
         height = 500;
-    
+  
+    var yHeight = 300;
+  
     var margin = 
     {
 		top: 20,
@@ -15,9 +16,10 @@ function getScale(data,svg,selection,yHeight)
     var color = d3.scale.category20b();
     
     var maxElement = d3.max(d3.values(data),function(i){
-        return i.nutrients[selection].amount;});
+        return i.nutrients[selection];});
+  
     var minElement = d3.min(d3.values(data),function(i){
-        return i.nutrients[selection].amount;});
+        return i.nutrients[selection];});
     
     var scale = d3.scale.linear()
         .range([margin.left, width-margin.right])
@@ -26,14 +28,12 @@ function getScale(data,svg,selection,yHeight)
     var exData = extractSelected();
     
   
-// Define Scales  
-var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(2);
-
+    // Define Scales  
+    var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(2);
     
     var foci = [];
     
-    for(i=0;i<exData.length;i++)
-    {
+    for(i=0;i<exData.length;i++) {
         foci[i] = {x: d3.values(exData)[i].x, y: yHeight};
     }
     
@@ -45,10 +45,11 @@ var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(2);
         .charge(0)
         .start();
     
+    // Remove old axis
     d3.select(".xaxis")
         .remove();
   
-      // x-axis
+    // Generate x-axis
     svg.append("g")
       .attr("class", "xaxis")
         .attr("transform", "translate(0," + ((height / 2) -20 ) + ")")
@@ -87,8 +88,8 @@ var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(2);
         svg.selectAll("circle")
             .each(cluster(10*e.alpha*e.alpha))
             .each(collide(0.5))
-            .attr("cx", function(d) { return d.x; })
-            .attr("cy", function(d) { return d.y; });
+            .attr("cx", function(d) { return +d.x; })
+            .attr("cy", function(d) { return +d.y; });
     });
     
     svg.on("mousemove", function()
@@ -104,9 +105,7 @@ var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(2);
             .transition()
             .duration(150)
             .attr("r", 23);
-        
         getDominantNutrients(data,d.index);
-        
     };
     
     function mouseout()
@@ -125,7 +124,7 @@ var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(2);
         
         for (i=0;i<data.length;i++)
         {
-            dd[i] = {x: data[i].nutrients[selection].amount, y: yHeight};
+            dd[i] = {x: data[i].nutrients[selection], y: yHeight};
         }
         return dd;
     }

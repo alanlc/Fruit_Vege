@@ -2,100 +2,100 @@
     {
         "food": "almond",
         "nutrients":
-        [
-            {"nutrient": "fat", "amount": 49},
-            {"nutrient": "carbohydrate", "amount": 22},
-            {"nutrient": "protein", "amount": 21}
-        ]
+            {
+                "fat": 49,
+                "carbohydrate": 22,
+                "protein": 21
+            }
     },
     {
         "food": "avocado",
         "nutrients":
-        [
-            {"nutrient": "fat", "amount": 15},
-            {"nutrient": "carbohydrate", "amount": 9},
-            {"nutrient": "protein", "amount": 2}
-        ]
+            {
+                "fat": 15,
+                "carbohydrate": 9,
+                "protein": 2
+            }
     },
     {
         "food": "banana",
         "nutrients":
-            [
-                {"nutrient": "fat", "amount": 0.3},
-                {"nutrient": "carbohydrate", "amount": 23},
-                {"nutrient": "protein", "amount": 1.1}
-            ]
+            {
+                "fat": 0.3,
+                "carbohydrate": 23,
+                "protein": 1.1
+            }
     },
     {
         "food": "cacao",
         "nutrients":
-            [
-                {"nutrient": "fat", "amount": 14},
-                {"nutrient": "carbohydrate", "amount": 58},
-                {"nutrient": "protein", "amount": 20}
-            ]
+            {
+                "fat": 14,
+                "carbohydrate": 58,
+                "protein": 20
+            }
     }, 
     {
         "food": "cashew",
         "nutrients":
-            [
-                {"nutrient": "fat", "amount": 44},
-                {"nutrient": "carbohydrate", "amount": 30},
-                {"nutrient": "protein", "amount": 18}
-            ]
+            {
+                "fat": 44,
+                "carbohydrate": 30,
+                "protein": 18
+            }
     },
     {
         "food": "coconut",
         "nutrients":
-            [
-                {"nutrient": "fat", "amount": 33},
-                {"nutrient": "carbohydrate", "amount": 15},
-                {"nutrient": "protein", "amount": 3.3}
-            ]
+            {
+                "fat": 33,
+                "carbohydrate": 15,
+                "protein": 3.3
+            }
     },
     {
         "food": "hemp",
         "nutrients":
-            [
-                {"nutrient": "fat", "amount": 45},
-                {"nutrient": "carbohydrate", "amount": 7},
-                {"nutrient": "protein", "amount": 37}
-            ]
+            {
+                "fat": 45,
+                "carbohydrate": 7,
+                "protein": 37
+            }
     },
     {
         "food": "maca",
         "nutrients":
-            [
-                {"nutrient": "fat", "amount": 4},
-                {"nutrient": "carbohydrate", "amount": 71},
-                {"nutrient": "protein", "amount": 14}
-            ]
+            {
+                "fat": 4,
+                "carbohydrate": 71,
+                "protein": 14
+            }
     }, 
     {
         "food": "mango",
         "nutrients":
-            [
-                {"nutrient": "fat", "amount": 0.4},
-                {"nutrient": "carbohydrate", "amount": 15},
-                {"nutrient": "protein", "amount": 0.8}
-            ]
+            {
+                "fat": 0.4,
+                "carbohydrate": 15,
+                "protein": 0.8
+            }
     },
     {
         "food": "olive",
         "nutrients":
-            [
-                {"nutrient": "fat", "amount": 11},
-                {"nutrient": "carbohydrate", "amount": 6},
-                {"nutrient": "protein", "amount": 0.8}
-            ]
+            {
+                "fat": 11,
+                "carbohydrate": 6,
+                "protein": 0.8
+            }
     },
     {
         "food": "peanut",
         "nutrients":
-            [
-                {"nutrient": "fat", "amount": 49},
-                {"nutrient": "carbohydrate", "amount": 16},
-                {"nutrient": "protein", "amount": 26}
-            ]
+            {
+                "fat": 49,
+                "carbohydrate": 16,
+                "protein": 26
+            }
     }
 ]

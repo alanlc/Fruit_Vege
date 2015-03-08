@@ -1,149 +1,63 @@
-function createScale(data)
-{
-    console.log(data);
+function createScale(data, svg) {    
+  
+  var nutrientchart = d3.select("#nutrients").append("div")
+    .attr("class", "dominant-nutrients");
+  
+  // Add detailed nutrition info header
+  nutrientchart.append("div")
+      .text("Main Nutrients")
+      .attr
+      ({
+        id: "main-nutrient-item",
+        class: "nutrient-item"
+      });
+  
+  // Create the selection menu and the detailed info box
+  for (var i = 0; i < nutrients.length; i++) {
     
-    var svg = d3.select("#display").append("svg")
-        .attr("class", "force-scale");
-    var selection = 0;
-    var yHeight = 300;
+    // Create selection menu sections
+    var div = d3.select("#menu")
+      .append("div")
+      .text(nutrients[i].charAt(0).toUpperCase() + nutrients[i].slice(1) + "s")
+      .attr
+      ({
+        id: nutrients[i],
+        class: "menu-item"
+      })
+      .on("click", mouseclick);
+      if(nutrients[i] == selection)
+        div.style("background-color", "darkgrey");
     
-    svg.append("g")
-        .attr("class", "nutrient-bar");
-    
-    getScale(data,svg,selection,yHeight)
-    
-    var scaleSelect = "fats";
-    
-    var bars = svg.selectAll(".nutrient-bar");
-    
-    bars.append("g");
-    
-    var barGroup = bars.selectAll("g");
-    
-    //TODO collapse hard coded bar selections
-    barGroup.append("rect")
-        .attr
-        ({
-            x: 0,
-            y: 0,
-            height: 100,
-            width: 50,
-            transform: "translate(20,80) rotate(-90) ",
-            id: "fats",
-            class: "nutrient-bar",
-            fill: "red"
-        })
-        .on
-        ({
-            click: mouseclick
-        });
-    
-    barGroup.append("text")
-        .text("Fats")
-        .attr
-        ({
-            x: 40,
-            y: 65,
-            height: 100,
-            width: 50,
-            id: "fats",
-            class: "nutrient-bar-text"
-        })
-        .on
-        ({
-            click: mouseclick
-        });
-    
-    bargroup = bars.append("g");
-    barGroup.append("rect")
-        .attr
-        ({
-            x: 0,
-            y: 0,
-            height: 140,
-            width: 50,
-            transform: "translate(121,80) rotate(-90) ",
-            id: "proteins",
-            class: "nutrient-bar",
-            fill: "steelblue"
-        })
-        .on
-        ({
-            click: mouseclick
-        });
-    
-    barGroup.append("text")
-        .text("Proteins")
-        .attr
-        ({
-            x: 135,
-            y: 65,
-            height: 100,
-            width: 50,
-            id: "proteins",
-            class: "nutrient-bar-text"
-        })
-        .on
-        ({
-            click: mouseclick
-        });
-    
-    bargroup = bars.append("g");
-    barGroup.append("rect")
-        .attr
-        ({
-            x: 0,
-            y: 0,
-            height: 220,
-            width: 50,
-            transform: "translate(262,80) rotate(-90) ",
-            id: "carbohydrates",
-            class: "nutrient-bar",
-            fill: "steelblue"
-        
-        })
-        .on
-        ({
-            click: mouseclick
-        });
-    
-    barGroup.append("text")
-        .text("Carbohydrates")
-        .attr
-        ({
-            x: 270,
-            y: 65,
-            height: 100,
-            width: 50,
-            id: "carbohydrates",
-            class: "nutrient-bar-text"
-        })
-        .on
-        ({
-            click: mouseclick
-        });
+    // Create detailed info sections
+    nutrientchart.append("div")
+      .text(nutrients[i])
+      .attr
+      ({
+        id: nutrients[i] + "-nutrient-item",
+        class: "nutrient-item"
+      });
+  }
 
-    function mouseclick()
-    {
-        if (this.id != scaleSelect)
-        {
-            d3.selectAll(".nutrient-bar")
-                .attr("fill","steelblue");
+  // Fired when a menu box is selected
+  function mouseclick() {
+    if (this.id != selection) {
+      
+      // Set all backgrounds to default
+      d3.selectAll(".menu-item")
+        .style("background-color", "lightgrey");
 
-            d3.select("#" + this.id)
-                .transition()
-                .duration(100)
-                .attr("fill", "red");
-            scaleSelect = this.id;
-        }
-        
-        if (this.id == "fats") selection = 0;
-        if (this.id == "carbohydrates") selection = 1;
-        if (this.id == "proteins") selection = 2;
-        
-        d3.selectAll(".force-scale-node").remove();
-        getScale(data,svg,selection,yHeight);
+      // Set selected box to highlighted color
+      d3.select("#" + this.id)
+        .transition()
+        .duration(100)
+        .style("background-color", "darkgrey");
+      
+      // Update the selection variable with the new id
+      selection = this.id;
+      
+      // Remove all displayed nodes and regenerate graph
+      d3.selectAll(".force-scale-node").remove();
+      getScale(data, svg, selection);
     }
-    
-    
+  }  
 }
