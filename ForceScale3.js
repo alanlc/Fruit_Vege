@@ -25,7 +25,7 @@ function createScale(data, svg) {
         class: "menu-item"
       })
       .on("click", mouseclick);
-      if(nutrients[i] == selection)
+      if(nutrients[i] == selected_nutrient)
         div.style("background-color", "darkgrey");
     
     // Create detailed info sections
@@ -40,7 +40,7 @@ function createScale(data, svg) {
 
   // Fired when a menu box is selected
   function mouseclick() {
-    if (this.id != selection) {
+    if (this.id != selected_nutrient) {
       
       // Set all backgrounds to default
       d3.selectAll(".menu-item")
@@ -53,11 +53,11 @@ function createScale(data, svg) {
         .style("background-color", "darkgrey");
       
       // Update the selection variable with the new id
-      selection = this.id;
+      selected_nutrient = this.id;
       
       // Remove all displayed nodes and regenerate graph
       d3.selectAll(".force-scale-node").remove();
-      getScale(data, svg, selection);
+      getScale(data, svg, selected_nutrient);
     }
   }  
 }

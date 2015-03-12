@@ -67,7 +67,8 @@ function getScale(data, svg, selection) {
         .append("g")
         .attr("class", "force-scale-node")
         .on("mouseover", mouseover)
-        .on("mouseout", mouseout);
+        .on("mouseout", mouseout)
+        .on("click", mouseclick);
         //.call(force.drag);
     
     nodes.append("circle")
@@ -97,6 +98,12 @@ function getScale(data, svg, selection) {
         force.resume();
     });
     
+    function mouseclick(d){
+        var dd = d3.select(this)[0];
+        selected_foods[data[d.index].food] = true;
+        d3.select("#selected").html(data[d.index].food);
+    };
+  
     function mouseover(d)
     {
         var dd = d3.select(this)[0];
