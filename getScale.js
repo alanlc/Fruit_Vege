@@ -100,7 +100,8 @@ function getScale(data, svg, selection) {
     function mouseclick(d){
         var dd = d3.select(this)[0];
         selected_foods[data[d.index].food] = true;
-        d3.select("#selected").html(data[d.index].food);
+        d3.select("#selected").append("div").id(data[d.index].food + "selected").html(data[d.index].food + "      " + data[d.index].nutrients.fat + "g"
+           + "      " + data[d.index].nutrients.carbohydrate + "g" + "      " + data[d.index].nutrients.protein + "g" + "<br />");
     };
   
     function mouseover(d)
