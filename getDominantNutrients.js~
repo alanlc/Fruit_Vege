@@ -18,7 +18,5 @@ function getDominantNutrients(data, foodIndex){
       d3.select(".dominant-nutrients")
           .style("left", xPos + "px")
           .style("top", yPos + "px")
-      
-      d3.select(".dominant-nutrients").classed("hidden", false);
     }
 }
