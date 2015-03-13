@@ -23,13 +23,12 @@ function getScale(data, svg, selection) {
     
     var scale = d3.scale.linear()
         .range([margin.left, width-margin.right])
-        .domain([0,maxElement]);
-
+        .domain([0,maxElement + (5 - maxElement % 5)]);
+  
     var exData = extractSelected();
     
-  
     // Define Scales  
-    var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(2);
+    var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(5).tickFormat(function(d) { return d + "g"; });
     
     var foci = [];
     
@@ -52,14 +51,14 @@ function getScale(data, svg, selection) {
     // Generate x-axis
     svg.append("g")
       .attr("class", "xaxis")
-        .attr("transform", "translate(0," + ((height / 2) -20 ) + ")")
+        .attr("transform", "translate(0," + (height - 50) + ")")
         .call(xAxis)
         .append("text")
         .attr("class", "label")
         .attr("y", 50)
         .attr("x", width/2)
         .style("text-anchor", "end")
-        .attr("font-size", "16px")
+        .attr("font-size", "16px");
   
     var nodes = svg.selectAll(".force-scale-node")
         .data(force.nodes())
