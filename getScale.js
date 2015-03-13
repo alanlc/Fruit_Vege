@@ -122,6 +122,8 @@ function getScale(data, svg, selection) {
             .transition()
             .duration(150)
             .attr("r", 20);
+        
+        d3.select(".dominant-nutrients").classed("hidden", true);
     };
     
     function extractSelected()

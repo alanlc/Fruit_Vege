@@ -12,5 +12,13 @@ function getDominantNutrients(data, foodIndex){
               if (i == -1) return ("Main Nutrients: " + data[foodIndex].food + " (100g)");
               else return (nutrientkeys[i] + "<span class=\"nutrient-amount\">" + nutrientdata[ nutrientkeys[i] ] + "g</span>")
           });
+          
+      var xPos = d3.event.pageX;
+      var yPos = d3.event.pageY;
+      d3.select(".dominant-nutrients")
+          .style("left", xPos + "px")
+          .style("top", yPos + "px")
+      
+      d3.select(".dominant-nutrients").classed("hidden", false);
     }
 }

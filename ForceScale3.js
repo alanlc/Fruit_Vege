@@ -2,6 +2,8 @@ function createScale(data, svg) {
   
   var nutrientchart = d3.select("#nutrients").append("div")
     .attr("class", "dominant-nutrients");
+    
+    nutrientchart.classed("hidden", true);
   
   // Add detailed nutrition info header
   nutrientchart.append("div")
