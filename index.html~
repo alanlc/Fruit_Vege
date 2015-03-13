@@ -99,8 +99,8 @@
   <div id="info">
     <h3>Code Sources:</h3>
     <p>
-        <a href="http://bl.ocks.org/mbostock/3231298" target="_blank">Collision Detection</a><br>
-        <a href="http://bl.ocks.org/mbostock/1748247" target="_blank">Force Clustering</a><br>
+        <a href="http://bl.ocks.org/mbostock/3231298">Collision Detection</a><br>
+        <a href="http://bl.ocks.org/mbostock/1748247">Force Clustering</a><br>
     </p>
     <h4>Group Members:</h4>
     <ul><li>Alan Chan</li>
