@@ -26,6 +26,8 @@ function getScale(data, svg, selection) {
         .domain([0,maxElement + (5 - maxElement % 5)]);
   
     var exData = extractSelected();
+    var selectedFood = [];
+    var selectedFoodIndex;
     
     // Define Scales  
     var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(5).tickFormat(function(d) { return d + "g"; });
@@ -67,7 +69,7 @@ function getScale(data, svg, selection) {
         .attr("class", "force-scale-node")
         .on("mouseover", mouseover)
         .on("mouseout", mouseout)
-        .on("click", mouseclick);
+        .on("click", addSelectedFood);
         //.call(force.drag);
     
     nodes.append("circle")
@@ -97,11 +99,11 @@ function getScale(data, svg, selection) {
         force.resume();
     });
     
-    function mouseclick(d){
-        var dd = d3.select(this)[0];
-        selected_foods[data[d.index].food] = true;
-        d3.select("#selected").append("div").id(data[d.index].food + "selected").html(data[d.index].food + "      " + data[d.index].nutrients.fat + "g"
-           + "      " + data[d.index].nutrients.carbohydrate + "g" + "      " + data[d.index].nutrients.protein + "g" + "<br />");
+    function addSelectedFood(d)
+    {
+        handleSelectedFood(data[d.index],selectedFood, d.index)
+            
+       
     };
   
     function mouseover(d)

@@ -10,7 +10,7 @@ function getDominantNutrients(data, foodIndex){
           .html(function() 
           {
               if (i == -1) return ("Main Nutrients: " + data[foodIndex].food + " (100g)");
-              else return (nutrientkeys[i] + "<span class=\"nutrient-amount\">" + nutrientdata[ nutrientkeys[i] ] + "g</span>")
+              else return (nutrientkeys[i] + "    " + "<span class=\"nutrient-amount\">" + nutrientdata[ nutrientkeys[i] ] + "g</span>")
           });
           
       var xPos = d3.event.pageX;
@@ -18,5 +18,7 @@ function getDominantNutrients(data, foodIndex){
       d3.select(".dominant-nutrients")
           .style("left", xPos + "px")
           .style("top", yPos + "px")
+      
+      d3.select(".dominant-nutrients").classed("hidden", false);
     }
 }

@@ -23,13 +23,14 @@ function getScale(data, svg, selection) {
     
     var scale = d3.scale.linear()
         .range([margin.left, width-margin.right])
-        .domain([0,maxElement]);
-
-    var exData = extractSelected();
-    
+        .domain([0,maxElement + (5 - maxElement % 5)]);
   
+    var exData = extractSelected();
+    var selectedFood = [];
+    var selectedFoodIndex;
+    
     // Define Scales  
-    var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(2);
+    var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(5).tickFormat(function(d) { return d + "g"; });
     
     var foci = [];
     
@@ -52,14 +53,14 @@ function getScale(data, svg, selection) {
     // Generate x-axis
     svg.append("g")
       .attr("class", "xaxis")
-        .attr("transform", "translate(0," + ((height / 2) -20 ) + ")")
+        .attr("transform", "translate(0," + (height - 50) + ")")
         .call(xAxis)
         .append("text")
         .attr("class", "label")
         .attr("y", 50)
         .attr("x", width/2)
         .style("text-anchor", "end")
-        .attr("font-size", "16px")
+        .attr("font-size", "16px");
   
     var nodes = svg.selectAll(".force-scale-node")
         .data(force.nodes())
@@ -68,7 +69,7 @@ function getScale(data, svg, selection) {
         .attr("class", "force-scale-node")
         .on("mouseover", mouseover)
         .on("mouseout", mouseout)
-        .on("click", mouseclick);
+        .on("click", addSelectedFood);
         //.call(force.drag);
     
     nodes.append("circle")
@@ -98,10 +99,11 @@ function getScale(data, svg, selection) {
         force.resume();
     });
     
-    function mouseclick(d){
-        var dd = d3.select(this)[0];
-        selected_foods[data[d.index].food] = true;
-        d3.select("#selected").html(data[d.index].food);
+    function addSelectedFood(d)
+    {
+        handlefoodTable(data[d.index],selectedFood, d.index)
+            
+       
     };
   
     function mouseover(d)
@@ -122,6 +124,7 @@ function getScale(data, svg, selection) {
             .transition()
             .duration(150)
             .attr("r", 20);
+        
         d3.select(".dominant-nutrients").classed("hidden", true);
     };
     
