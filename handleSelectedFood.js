@@ -19,7 +19,7 @@ function handleSelectedFood(selection,foodTable, index)
                 .append("div")
                 .attr("id", "plus")
                 .attr("class", "selected-plusminus")
-                .text(" + ")
+                .text("+")
                 .on("click", function()
                 {
                     foodTable[index]
@@ -32,7 +32,7 @@ function handleSelectedFood(selection,foodTable, index)
                 .append("div")
                 .attr("id", "minus")
                 .attr("class", "selected-plusminus")
-                .text(" - ")
+                .text("-")
                 .on("click", function()
                 {
                     foodTable[index]

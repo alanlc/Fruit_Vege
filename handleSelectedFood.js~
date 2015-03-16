@@ -9,11 +9,6 @@ function handleSelectedFood(selection,foodTable, index)
                 .attr("class", "selected-food-item")
                 .text(selection.food);
             
-            foodTable[index]
-                .append("span")
-                .attr("id", "amount")
-                .attr("class", "selected-food-serving")
-                .text(foodTable[index].attr("value"))
             
             foodTable[index]
                 .append("div")
@@ -48,14 +43,20 @@ function handleSelectedFood(selection,foodTable, index)
                     if (foodTable[index].attr("value") == "0") 
                         foodTable[index].remove();
                 });
-            }
-            else 
-            {
-                foodTable[index]
-                    .attr("value", +foodTable[index].attr("value")+1)
-                    .select("#amount")
-                    .text(foodTable[index].attr("value"));
-            }
+                
+            foodTable[index]
+                .append("span")
+                .attr("id", "amount")
+                .attr("class", "selected-food-serving")
+                .text(foodTable[index].attr("value"));
+        }
+        else 
+        {
+            foodTable[index]
+                .attr("value", +foodTable[index].attr("value")+1)
+                .select("#amount")
+                .text(foodTable[index].attr("value"));
+        }
     
 
 }
