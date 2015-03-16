@@ -23,15 +23,25 @@ function calculateGDA(data,selectedFood)
     
     var width = 200;
     
+    var scale = d3.scale.linear()
+        .range([105, 200])
+        .domain([0,100]);
+    
     d3.select("#Fat-Progress")
+        .style("width", Math.min(scale(percentFat),200) + "px")
+        .style("background-color", "#5A4747")
         .selectAll("span")
-            .text(totalFat + "%");
+            .text(percentFat + "%");
     
     d3.select("#Carbohydrate-Progress")
+        .style("width", Math.min(scale(percentCarb),200) + "px")
+        .style("background-color", "#5A4747")
         .selectAll("span")
-            .text(totalCarb + "%");
+            .text(percentCarb + "%");
             
     d3.select("#Protein-Progress")
+        .style("width", Math.min(scale(percentProtein),200) + "px")
+        .style("background-color", "#5A4747")
         .selectAll("span")
-            .text(totalProtein + "%");
+            .text(percentProtein + "%");
 }
