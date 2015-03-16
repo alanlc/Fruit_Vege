@@ -190,19 +190,19 @@
     <p>CMPS165 - Data Programming for Visualization<br />Winter 2015 - Suresh K. Lodha</p>
   </div>
 </body>
-<script src = "ForceScale3.js"></script>
+<script src = "initialise.js"></script>
+<script src = "getScale.js"></script>
 <script src = "calculateGDA.js"></script>
 <script src = "getDominantNutrients.js"></script>
-<script src = "getScale.js"></script>
 <script src = "handleSelectedFood.js"></script>
-<script src = "createGDATable.js"></script>
 <script type = "text/javascript">
     
     // Global Variables
     var selected_nutrient = "protein";
     var selected_foods = {};
-    var nutrients = ["protein", "calories", "fiber", "calcium"];
-    var units = ["g", "kcal", "g", "mg"];
+    var nutrients = ["protein", "calories", "fiber"];
+    var units = ["g", "kcal", "g"];
+    var gda = [45, 2000, 24];
   
     // Load JSON data
     d3.json("data.json", function(error, json) {
@@ -212,10 +212,9 @@
           .append("svg")
           .attr("class", "force-scale");
         
-        var selectedFood = [];
         // Initialise the scales then populate
-        createScale(data, svg, selectedFood);
-        getScale(data, svg, selected_nutrient, selectedFood);
+        initialise(data, svg);
+        getScale(data, svg, selected_nutrient);
     });
 </script>
 </html>

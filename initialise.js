@@ -1,9 +1,9 @@
-function createScale(data, svg, selectedFood) {    
+function initialise(data, svg) {    
   
+  // Create the defailed nutrition box
   var nutrientchart = d3.select("#nutrients").append("div")
-    .attr("class", "dominant-nutrients");
-    
-    nutrientchart.classed("hidden", true);
+    .attr("class", "dominant-nutrients")
+    .classed("hidden", true);
   
   // Add detailed nutrition info header
   nutrientchart.append("div")
@@ -14,7 +14,13 @@ function createScale(data, svg, selectedFood) {
         class: "nutrient-item"
       });
   
-  // Create the selection menu and the detailed info box
+  // Create GDA fulfillment box
+  var gda = d3.select("#GDA")
+        .append("div")
+        .attr("class", "gda")
+        .text("Guidline Amount Fulfillment");
+  
+  // Create the selection menu, defailed info box, GDA fulfillment box
   for (var i = 0; i < nutrients.length; i++) {
     
     // Create selection menu sections
@@ -28,8 +34,7 @@ function createScale(data, svg, selectedFood) {
       })
       .on("click", mouseclick);
       if(nutrients[i] == selected_nutrient)
-        div
-            .style("color", "#FF3030");
+        div.style("color", "#FF3030");
     
     // Create detailed info sections
     nutrientchart.append("div")
@@ -39,10 +44,18 @@ function createScale(data, svg, selectedFood) {
         id: nutrients[i] + "-nutrient-item",
         class: "nutrient-item"
       });
+    
+    // Create GDA Fulfillment sections
+    gda.append("div")
+      .attr("id", nutrients[i])
+      .attr("class", "gda-nutrient")
+      .append("div")
+      .text(nutrients[i].charAt(0).toUpperCase() + nutrients[i].slice(1))
+      .attr("id", nutrients[i] + "-progress")
+      .append("span")
+      .attr("class", "gda-percentage")
+      .text("0%");
   }
-
-  //set up gda table
-  createGDATable();
 
   // Fired when a menu box is selected
   function mouseclick() {
@@ -63,7 +76,7 @@ function createScale(data, svg, selectedFood) {
       
       // Remove all displayed nodes and regenerate graph
       d3.selectAll(".force-scale-node").remove();
-      getScale(data, svg, selected_nutrient, selectedFood);
+      getScale(data, svg, selected_nutrient);
     }
   }  
 }

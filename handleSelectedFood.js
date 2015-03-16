@@ -1,71 +1,69 @@
-function handleSelectedFood(data, foodTable, index)
-{
-    var selection = data[index];
-    
-    if (foodTable[index] == null)
-        {
-            foodTable[index] = d3.select("#selected")
-                .append("div")
-                .attr("id", "selected-"+selection.food)
-                .attr("value", 1)
-                .attr("class", "selected-food-item")
-                .text(selection.food);
-            
-            
-            foodTable[index]
-                .append("div")
-                .attr("id", "selected-serving-control")
-                .attr("class", "selected-food-control");
-                
-            foodTable[index].select("#selected-serving-control")
-                .append("div")
-                .attr("id", "plus")
-                .attr("class", "selected-plusminus")
-                .text("+")
-                .on("click", function()
-                {
-                    foodTable[index]
-                        .attr("value", +foodTable[index].attr("value")+1)
-                        .select("#amount")
-                        .text(foodTable[index].attr("value"));
-                        
-                    calculateGDA(data,foodTable);
-                });
-                
-            foodTable[index].select("#selected-serving-control")
-                .append("div")
-                .attr("id", "minus")
-                .attr("class", "selected-plusminus")
-                .text("-")
-                .on("click", function()
-                {
-                    foodTable[index]
-                        .attr("value", +foodTable[index].attr("value")-1)
-                        .select("#amount")
-                        .text(foodTable[index].attr("value"));
-                        
-                    if (foodTable[index].attr("value") == "0")
-                    {
-                        foodTable[index].remove();
-                        foodTable[index] = null;
-                    }
-                        
-                    calculateGDA(data,foodTable);
-                });
-                
-            foodTable[index]
-                .append("span")
-                .attr("id", "amount")
-                .attr("class", "selected-food-serving")
-                .text(foodTable[index].attr("value"));
-        }
-        else 
-        {
-            foodTable[index]
-                .attr("value", +foodTable[index].attr("value")+1)
-                .select("#amount")
-                .text(foodTable[index].attr("value"));
-        }
-    
+function handleSelectedFood(data, index){
+  var selection = data[index];
 
+  if (!selected_foods[index]) {
+    selected_foods[index] = 1;
+    var element = d3.select("#selected")
+      .append("div")
+      .attr("id", "selected-"+selection.food)
+      .attr("value", 1)
+      .attr("class", "selected-food-item")
+      .text(selection.food);
+
+    element.append("div")
+      .attr("id", "selected-serving-control")
+      .attr("class", "selected-food-control");
+
+    element.select("#selected-serving-control")
+      .append("div")
+      .attr("id", "plus")
+      .attr("class", "selected-plusminus")
+      .text("+")
+      .on("click", function()
+      {
+          element.attr("value", +element.attr("value")+1)
+              .select("#amount")
+              .text(element.attr("value"));
+
+          calculateGDA(data, index, true);
+      });
+
+    element.select("#selected-serving-control")
+      .append("div")
+      .attr("id", "minus")
+      .attr("class", "selected-plusminus")
+      .text("-")
+      .on("click", function()
+      {
+          element
+              .attr("value", +element.attr("value")-1)
+              .select("#amount")
+              .text(element.attr("value"));
+
+          if (element.attr("value") == "0")
+          {
+              element.remove();
+              element = null;
+              selected_foods[index] = null;
+          }
+
+          calculateGDA(data, index, false);
+      });
+
+    element
+      .append("span")
+      .attr("id", "amount")
+      .attr("class", "selected-food-serving")
+      .text(element.attr("value"));
+    
+  } else {
+    
+    var element = d3.select("#selected-"+selection.food);
+    
+    element.attr("value", +element.attr("value")+1)
+      .select("#amount")
+      .text(element.attr("value"));
+    
+    selected_foods[index] += 1;
+  }
 }

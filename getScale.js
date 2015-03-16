@@ -99,9 +99,8 @@ function getScale(data, svg, scaleSelection, selectedFood) {
     
     function addSelectedFood(d)
     {
-        handleSelectedFood(data,selectedFood,d.index);
-        calculateGDA(data,selectedFood);
-       
+        handleSelectedFood(data, d.index);
+        calculateGDA(data, d.index, true);
     };
   
     function mouseover(d)
