@@ -1,6 +1,0 @@
-function calculateGDA(selectedFood)
-{
-    var gdaProtein = 45, gdaFat = 70, gdaCarb = 230;
-
-    console.log(selectedFood);
-}

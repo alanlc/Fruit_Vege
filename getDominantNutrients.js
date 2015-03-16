@@ -9,8 +9,8 @@ function getDominantNutrients(data, foodIndex){
       d3.select("#" + (i == -1 ? "main" : nutrientkeys[i]) + "-nutrient-item")
           .html(function() 
           {
-              if (i == -1) return ("Main Nutrients: " + data[foodIndex].food + " (100g)");
-              else return (nutrientkeys[i] + "<span class=\"nutrient-amount\">" + nutrientdata[ nutrientkeys[i] ] + "g</span>")
+              if (i == -1) return ("Main Nutrients: " + data[foodIndex].food + "");
+              else return (nutrientkeys[i] + "<span class=\"nutrient-amount\">" + nutrientdata[ nutrientkeys[i] ] + units[i] + "</span>")
           });
           
       var xPos = d3.event.pageX;

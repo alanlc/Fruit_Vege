@@ -176,6 +176,11 @@
         <a href="http://bl.ocks.org/mbostock/3231298" target="_blank">Collision Detection</a><br>
         <a href="http://bl.ocks.org/mbostock/1748247" target="_blank">Force Clustering</a><br>
     </p>
+    <h3>Data Sources:</h3>
+    <p>
+        <a href="http://www.health-alternatives.com/fruit-nutrition-chart.html" target="_blank">Fruit Nutrition Data</a><br>
+        <a href="http://www.health-alternatives.com/vegetables-nutrition-chart.html" target="_blank">Vegetable Nutrition Data</a><br>
+    </p>
     <h4>Group Members:</h4>
     <ul><li>Alan Chan</li>
         <li>Samuel Toussaint</li>
@@ -194,9 +199,10 @@
 <script type = "text/javascript">
     
     // Global Variables
-    var selected_nutrient = "fat";
+    var selected_nutrient = "protein";
     var selected_foods = {};
-    var nutrients = ["fat", "carbohydrate", "protein"];
+    var nutrients = ["protein", "calories", "fiber", "calcium"];
+    var units = ["g", "kcal", "g", "mg"];
   
     // Load JSON data
     d3.json("data.json", function(error, json) {

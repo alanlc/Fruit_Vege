@@ -20,7 +20,7 @@ function createScale(data, svg, selectedFood) {
     // Create selection menu sections
     var div = d3.select("#menu")
       .append("div")
-      .text(nutrients[i].charAt(0).toUpperCase() + nutrients[i].slice(1) + "s")
+      .text(nutrients[i].charAt(0).toUpperCase() + nutrients[i].slice(1))
       .attr
       ({
         id: nutrients[i],
