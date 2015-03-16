@@ -1,4 +1,4 @@
-function createScale(data, svg) {    
+function createScale(data, svg, selectedFood) {    
   
   var nutrientchart = d3.select("#nutrients").append("div")
     .attr("class", "dominant-nutrients");
@@ -41,6 +41,9 @@ function createScale(data, svg) {
       });
   }
 
+  //set up gda table
+  createGDATable();
+
   // Fired when a menu box is selected
   function mouseclick() {
     if (this.id != selected_nutrient) {
@@ -60,7 +63,7 @@ function createScale(data, svg) {
       
       // Remove all displayed nodes and regenerate graph
       d3.selectAll(".force-scale-node").remove();
-      getScale(data, svg, selected_nutrient);
+      getScale(data, svg, selected_nutrient, selectedFood);
     }
   }  
 }

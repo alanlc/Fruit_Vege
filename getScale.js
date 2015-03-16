@@ -1,10 +1,10 @@
-//function creates food scale based on the nutrient selection
-function getScale(data, svg, selection) {
+//function creates food scale based on the nutrient scaleSelection
+function getScale(data, svg, scaleSelection, selectedFood) {
     var width = 700,
         height = 500;
   
     var yHeight = 300;
-  
+    
     var margin = 
     {
 		top: 20,
@@ -16,18 +16,16 @@ function getScale(data, svg, selection) {
     var color = d3.scale.category20b();
     
     var maxElement = d3.max(d3.values(data),function(i){
-        return i.nutrients[selection];});
+        return i.nutrients[scaleSelection];});
   
     var minElement = d3.min(d3.values(data),function(i){
-        return i.nutrients[selection];});
+        return i.nutrients[scaleSelection];});
     
     var scale = d3.scale.linear()
         .range([margin.left, width-margin.right])
         .domain([0,maxElement + (5 - maxElement % 5)]);
   
     var exData = extractSelected();
-    var selectedFood = [];
-    var selectedFoodIndex;
     
     // Define Scales  
     var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(5).tickFormat(function(d) { return d + "g"; });
@@ -101,8 +99,8 @@ function getScale(data, svg, selection) {
     
     function addSelectedFood(d)
     {
-        handleSelectedFood(data[d.index],selectedFood, d.index)
-            
+        handleSelectedFood(data,selectedFood,d.index);
+        calculateGDA(data,selectedFood);
        
     };
   
@@ -135,7 +133,7 @@ function getScale(data, svg, selection) {
         
         for (i=0;i<data.length;i++)
         {
-            dd[i] = {x: data[i].nutrients[selection], y: yHeight};
+            dd[i] = {x: data[i].nutrients[scaleSelection], y: yHeight};
         }
         return dd;
     }

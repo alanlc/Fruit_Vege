@@ -1,5 +1,7 @@
-function handleSelectedFood(selection,foodTable, index)
+function handleSelectedFood(data, foodTable, index)
 {
+    var selection = data[index];
+    
     if (foodTable[index] == null)
         {
             foodTable[index] = d3.select("#selected")
@@ -26,6 +28,8 @@ function handleSelectedFood(selection,foodTable, index)
                         .attr("value", +foodTable[index].attr("value")+1)
                         .select("#amount")
                         .text(foodTable[index].attr("value"));
+                        
+                    calculateGDA(data,foodTable);
                 });
                 
             foodTable[index].select("#selected-serving-control")
@@ -42,6 +46,8 @@ function handleSelectedFood(selection,foodTable, index)
                         
                     if (foodTable[index].attr("value") == "0") 
                         foodTable[index].remove();
+                        
+                    calculateGDA(data,foodTable);
                 });
                 
             foodTable[index]
