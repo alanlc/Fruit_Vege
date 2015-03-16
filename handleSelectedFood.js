@@ -44,8 +44,11 @@ function handleSelectedFood(data, foodTable, index)
                         .select("#amount")
                         .text(foodTable[index].attr("value"));
                         
-                    if (foodTable[index].attr("value") == "0") 
+                    if (foodTable[index].attr("value") == "0")
+                    {
                         foodTable[index].remove();
+                        foodTable[index] = null;
+                    }
                         
                     calculateGDA(data,foodTable);
                 });
