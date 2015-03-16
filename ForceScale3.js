@@ -28,7 +28,8 @@ function createScale(data, svg) {
       })
       .on("click", mouseclick);
       if(nutrients[i] == selected_nutrient)
-        div.style("background-color", "darkgrey");
+        div
+            .style("color", "#FF3030");
     
     // Create detailed info sections
     nutrientchart.append("div")
@@ -46,13 +47,13 @@ function createScale(data, svg) {
       
       // Set all backgrounds to default
       d3.selectAll(".menu-item")
-        .style("background-color", "lightgrey");
+        .style("color", "#fff");
 
       // Set selected box to highlighted color
       d3.select("#" + this.id)
         .transition()
         .duration(100)
-        .style("background-color", "darkgrey");
+        .style("color", "#FF3030");
       
       // Update the selection variable with the new id
       selected_nutrient = this.id;

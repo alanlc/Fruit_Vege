@@ -9,11 +9,6 @@ function handleSelectedFood(selection,foodTable, index)
                 .attr("class", "selected-food-item")
                 .text(selection.food);
             
-            foodTable[index]
-                .append("span")
-                .attr("id", "amount")
-                .attr("class", "selected-food-serving")
-                .text(foodTable[index].attr("value"))
             
             foodTable[index]
                 .append("div")
@@ -23,7 +18,7 @@ function handleSelectedFood(selection,foodTable, index)
             foodTable[index].select("#selected-serving-control")
                 .append("div")
                 .attr("id", "plus")
-                .attr("class", "selected-food-control")
+                .attr("class", "selected-plusminus")
                 .text(" + ")
                 .on("click", function()
                 {
@@ -36,7 +31,7 @@ function handleSelectedFood(selection,foodTable, index)
             foodTable[index].select("#selected-serving-control")
                 .append("div")
                 .attr("id", "minus")
-                .attr("class", "selected-food-control")
+                .attr("class", "selected-plusminus")
                 .text(" - ")
                 .on("click", function()
                 {
@@ -48,14 +43,20 @@ function handleSelectedFood(selection,foodTable, index)
                     if (foodTable[index].attr("value") == "0") 
                         foodTable[index].remove();
                 });
-            }
-            else 
-            {
-                foodTable[index]
-                    .attr("value", +foodTable[index].attr("value")+1)
-                    .select("#amount")
-                    .text(foodTable[index].attr("value"));
-            }
+                
+            foodTable[index]
+                .append("span")
+                .attr("id", "amount")
+                .attr("class", "selected-food-serving")
+                .text(foodTable[index].attr("value"));
+        }
+        else 
+        {
+            foodTable[index]
+                .attr("value", +foodTable[index].attr("value")+1)
+                .select("#amount")
+                .text(foodTable[index].attr("value"));
+        }
     
 
 }

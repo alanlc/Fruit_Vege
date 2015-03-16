@@ -1,4 +1,4 @@
-function handlefoodTable(selection,foodTable, index)
+function handleSelectedFood(selection,foodTable, index)
 {
     if (foodTable[index] == null)
         {
@@ -23,7 +23,7 @@ function handlefoodTable(selection,foodTable, index)
             foodTable[index].select("#selected-serving-control")
                 .append("div")
                 .attr("id", "plus")
-                .attr("class", "selected-food-control")
+                .attr("class", "selected-plusminus")
                 .text(" + ")
                 .on("click", function()
                 {
@@ -36,7 +36,7 @@ function handlefoodTable(selection,foodTable, index)
             foodTable[index].select("#selected-serving-control")
                 .append("div")
                 .attr("id", "minus")
-                .attr("class", "selected-food-control")
+                .attr("class", "selected-plusminus")
                 .text(" - ")
                 .on("click", function()
                 {
