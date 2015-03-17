@@ -90,6 +90,24 @@
       }
     },
     {
+      "food": "raisin",
+      "serving": "1 cup (145g)",
+      "nutrients": {
+        "fat": 0.7,
+        "carbohydrate": 115,
+        "fiber": 5.4,
+        "sugar": 85.8,
+        "protein": 4.5,
+        "sodium": 16,
+        "magnesium": 46.4,
+        "calcium": 72.5,
+        "potassium": 1086,
+        "iron": 2.7,
+        "vitaminA": 0,
+        "vitaminC": 3.3
+      }
+    },
+    {
       "food": "strawberry",
       "serving": "1 cup (144g)",
       "nutrients": {

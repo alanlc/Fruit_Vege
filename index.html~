@@ -200,9 +200,9 @@
     // Global Variables
     var selected_nutrient = "fat";
     var selected_foods = {};
-    var nutrients = ["fat", "carbohydrate", "fiber","sugar","protein","sodium","magnesium","calcium","potassium","iron","vitaminA","vitaminC"];
-    var units = ["g", "g", "g","g","g","mg","mg","mg","mg","mg","IU","mg"];
-    var gda = [65,300,25,90,50,2400,400,1000,4700,18,3000,60];
+    var nutrients = ["fat", "carbohydrate", "protein"];
+    var units = ["g", "g", "g"];
+    var gda = [70, 230, 45];
   
     // Load JSON data
     d3.json("data.json", function(error, json) {
