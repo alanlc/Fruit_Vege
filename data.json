@@ -1,101 +1,472 @@
-[
-    {
-        "food": "almond",
-        "nutrients":
-            {
-                "fat": 49,
-                "carbohydrate": 22,
-                "protein": 21
-            }
+{
+  "foods": [
+{
+      "food": "kale",
+      "serving": "1 Cup (67g)",
+      "nutrients": {
+        "fat": 0,
+        "carbohydrate": 7,
+        "fiber": 1,
+        "sugar": 0,
+        "protein": 2,
+        "sodium": 29,
+        "magnesium": 22.8,
+        "calcium": 90.5,
+        "potassium": 299,
+        "iron": 1.1,
+        "vitaminA": 10302,
+        "vitaminC": 80.4
+      }
     },
-    {
-        "food": "avocado",
-        "nutrients":
-            {
-                "fat": 15,
-                "carbohydrate": 9,
-                "protein": 2
-            }
+{
+      "food": "spinach",
+      "serving": "1 Cup (30g)",
+      "nutrients": {
+        "fat": 0,
+        "carbohydrate": 1,
+        "fiber": 1,
+        "sugar": 0,
+        "protein": 1,
+        "sodium": 24,
+        "magnesium": 23.7,
+        "calcium": 90.5,
+        "potassium": 299,
+        "iron": 0.8,
+        "vitaminA": 2813,
+        "vitaminC": 8.4
+      }
     },
-    {
-        "food": "banana",
-        "nutrients":
-            {
-                "fat": 0.3,
-                "carbohydrate": 23,
-                "protein": 1.1
-            }
+{
+      "food": "lettuce",
+      "serving": "1 Cup (36g)",
+      "nutrients": {
+        "fat": 0,
+        "carbohydrate": 1,
+        "fiber": 0,
+        "sugar": 0,
+        "protein": 0,
+        "sodium": 24,
+        "magnesium": 4.7,
+        "calcium": 13,
+        "potassium": 69.8,
+        "iron": 0.3,
+        "vitaminA": 2665,
+        "vitaminC": 6.5
+      }
     },
-    {
-        "food": "cacao",
-        "nutrients":
-            {
-                "fat": 14,
-                "carbohydrate": 58,
-                "protein": 20
-            }
-    }, 
-    {
-        "food": "cashew",
-        "nutrients":
-            {
-                "fat": 44,
-                "carbohydrate": 30,
-                "protein": 18
-            }
+{
+      "food": "kale",
+      "serving": "1 Cup (128g)",
+      "nutrients": {
+        "fat": 0,
+        "carbohydrate": 12,
+        "fiber": 4,
+        "sugar": 6,
+        "protein": 1,
+        "sodium": 88,
+        "magnesium": 15.4,
+        "calcium": 44.2,
+        "potassium": 410,
+        "iron": 0.4,
+        "vitaminA": 21383,
+        "vitaminC": 7.6
+      }
     },
-    {
-        "food": "coconut",
-        "nutrients":
-            {
-                "fat": 33,
-                "carbohydrate": 15,
-                "protein": 3.3
-            }
+{
+      "food": "carrots",
+      "serving": "1 Cup (128g)",
+      "nutrients": {
+        "fat": 0,
+        "carbohydrate": 12,
+        "fiber": 4,
+        "sugar": 6,
+        "protein": 1,
+        "sodium": 88,
+        "magnesium": 15.4,
+        "calcium": 44.2,
+        "potassium": 410,
+        "iron": 0.4,
+        "vitaminA": 21383,
+        "vitaminC": 7.6
+      }
     },
-    {
-        "food": "hemp",
-        "nutrients":
-            {
-                "fat": 45,
-                "carbohydrate": 7,
-                "protein": 37
-            }
+{
+      "food": "beets",
+      "serving": "1 Cup (136g)",
+      "nutrients": {
+        "fat": 0,
+        "carbohydrate": 13,
+        "fiber": 4,
+        "sugar": 9,
+        "protein": 2,
+        "sodium": 106,
+        "magnesium": 31.3,
+        "calcium": 21.8,
+        "potassium": 442,
+        "iron": 1.1,
+        "vitaminA": 44.9,
+        "vitaminC": 6.7
+      }
     },
-    {
-        "food": "maca",
-        "nutrients":
-            {
-                "fat": 4,
-                "carbohydrate": 71,
-                "protein": 14
-            }
-    }, 
-    {
-        "food": "mango",
-        "nutrients":
-            {
-                "fat": 0.4,
-                "carbohydrate": 15,
-                "protein": 0.8
-            }
+{
+      "food": "asparagus",
+      "serving": "1 Cup (134g)",
+      "nutrients": {
+        "fat": 0,
+        "carbohydrate": 5,
+        "fiber": 3,
+        "sugar": 3,
+        "protein": 3,
+        "sodium": 3,
+        "magnesium": 18.8,
+        "calcium": 32.2,
+        "potassium": 271,
+        "iron": 2.9,
+        "vitaminA": 1013,
+        "vitaminC": 7.5
+      }
     },
-    {
-        "food": "olive",
-        "nutrients":
-            {
-                "fat": 11,
-                "carbohydrate": 6,
-                "protein": 0.8
-            }
+{
+      "food": "broccoli",
+      "serving": "1 Cup (91g)",
+      "nutrients": {
+        "fat": 0,
+        "carbohydrate": 6,
+        "fiber": 2,
+        "sugar": 2,
+        "protein": 3,
+        "sodium": 30,
+        "magnesium": 19.1,
+        "calcium": 42.8,
+        "potassium": 228,
+        "iron": 0.7,
+        "vitaminA": 567,
+        "vitaminC": 81.2
+      }
     },
-    {
-        "food": "peanut",
-        "nutrients":
-            {
-                "fat": 49,
-                "carbohydrate": 16,
-                "protein": 26
-            }
+{
+      "food": "cauliflower",
+      "serving": "1 Cup (100g)",
+      "nutrients": {
+        "fat": 0,
+        "carbohydrate": 5,
+        "fiber": 3,
+        "sugar": 2,
+        "protein": 2,
+        "sodium": 30,
+        "magnesium": 15,
+        "calcium": 22,
+        "potassium": 303,
+        "iron": 0.4,
+        "vitaminA": 13,
+        "vitaminC": 46.4
+      }
+    },
+{
+      "food": "cabbage",
+      "serving": "1 Cup (89g)",
+      "nutrients": {
+        "fat": 0,
+        "carbohydrate": 5,
+        "fiber": 2,
+        "sugar": 3,
+        "protein": 1,
+        "sodium": 16,
+        "magnesium": 10.7,
+        "calcium": 35.6,
+        "potassium": 151,
+        "iron": 0.4,
+        "vitaminA": 87.2,
+        "vitaminC": 32.6
+      }
+    },
+{
+      "food": "celery",
+      "serving": "1 Cup (101g)",
+      "nutrients": {
+        "fat": 0,
+        "carbohydrate": 3,
+        "fiber": 2,
+        "sugar": 2,
+        "protein": 1,
+        "sodium": 81,
+        "magnesium": 11.1,
+        "calcium": 40.4,
+        "potassium": 263,
+        "iron": 0.2,
+        "vitaminA": 453,
+        "vitaminC": 3.1
+      }
+    },
+{
+      "food": "zucchini",
+      "serving": "1 Cup (124g)",
+      "nutrients": {
+        "fat": 0,
+        "carbohydrate": 4,
+        "fiber": 1,
+        "sugar": 2,
+        "protein": 2,
+        "sodium": 12,
+        "magnesium": 21.1,
+        "calcium": 18.6,
+        "potassium": 325,
+        "iron": 0.4,
+        "vitaminA": 248,
+        "vitaminC": 21.1
+      }
+    },
+{
+      "food": "jalapeno",
+      "serving": "1 Cup (90g)",
+      "nutrients": {
+        "fat": 1,
+        "carbohydrate": 6,
+        "fiber": 3,
+        "sugar": 3,
+        "protein": 1,
+        "sodium": 1,
+        "magnesium": 17.1,
+        "calcium": 9,
+        "potassium": 194,
+        "iron": 0.6,
+        "vitaminA": 719,
+        "vitaminC": 39.9
+      }
+    },
+{
+      "food": "brussel sprouts",
+      "serving": "1 Cup (88g)",
+      "nutrients": {
+        "fat": 0,
+        "carbohydrate": 8,
+        "fiber": 3,
+        "sugar": 2,
+        "protein": 3,
+        "sodium": 22,
+        "magnesium": 20.2,
+        "calcium": 1.2,
+        "potassium": 342,
+        "iron": 1.2,
+        "vitaminA": 664,
+        "vitaminC": 74.8
+      }
+    },
+{
+      "food": "radishes",
+      "serving": "1 Cup (116g)",
+      "nutrients": {
+        "fat": 0,
+        "carbohydrate": 4,
+        "fiber": 2,
+        "sugar": 2,
+        "protein": 1,
+        "sodium": 45,
+        "magnesium": 11.6,
+        "calcium": 29,
+        "potassium": 270,
+        "iron": 0.4,
+        "vitaminA": 8.1,
+        "vitaminC": 17.2
+      }
+    },
+{
+      "food": "coconut",
+      "serving": "1 Cup (80g)",
+      "nutrients": {
+        "fat": 27,
+        "carbohydrate": 12,
+        "fiber": 7,
+        "sugar": 4,
+        "protein": 3,
+        "sodium": 16,
+        "magnesium": 25.6,
+        "calcium": 11.2,
+        "potassium": 285,
+        "iron": 1.9,
+        "vitaminA": 0,
+        "vitaminC": 2.6
+      }
+    },
+{
+      "food": "almonds",
+      "serving": "1 Oz (28g)",
+      "nutrients": {
+        "fat": 15,
+        "carbohydrate": 5,
+        "fiber": 3,
+        "sugar": 1,
+        "protein": 6,
+        "sodium": 0,
+        "magnesium": 80.8,
+        "calcium": 75.1,
+        "potassium": 211,
+        "iron": 1.3,
+        "vitaminA": 0.3,
+        "vitaminC": 0
+      }
+    },
+{
+      "food": "cashews",
+      "serving": "1 Oz (28g)",
+      "nutrients": {
+        "fat": 13,
+        "carbohydrate": 9,
+        "fiber": 1,
+        "sugar": 1,
+        "protein": 14,
+        "sodium": 4,
+        "magnesium": 72.8,
+        "calcium": 12.6,
+        "potassium": 158,
+        "iron": 1.7,
+        "vitaminA": 0,
+        "vitaminC": 0
+      }
+    },
+{
+      "food": "Hemp seed",
+      "serving": "1 Oz (30g)",
+      "nutrients": {
+        "fat": 14,
+        "carbohydrate": 2,
+        "fiber": 2,
+        "sugar": 0,
+        "protein": 11,
+        "sodium": 0,
+        "magnesium": 192,
+        "calcium": 0,
+        "potassium": 0,
+        "iron": 2.9,
+        "vitaminA": 0,
+        "vitaminC": 0
+      }
+    },
+{
+      "food": "peanuts",
+      "serving": "1 Oz (28g)",
+      "nutrients": {
+        "fat": 14,
+        "carbohydrate": 6,
+        "fiber": 2,
+        "sugar": 1,
+        "protein": 7,
+        "sodium": 2,
+        "magnesium": 9.3,
+        "calcium": 7.6,
+        "potassium": 145,
+        "iron": 0.3,
+        "vitaminA": 0,
+        "vitaminC": 0
+      }
+    },
+{
+      "food": "chestnuts",
+      "serving": "1 Oz (28g)",
+      "nutrients": {
+        "fat": 1,
+        "carbohydrate": 13,
+        "fiber": 2,
+        "sugar": 0,
+        "protein": 1,
+        "sodium": 1,
+        "magnesium": 46.6,
+        "calcium": 39.2,
+        "potassium": 751,
+        "iron": 1.5,
+        "vitaminA": 7.8,
+        "vitaminC": 12.0
+      }
+    },
+{
+      "food": "hazelnuts",
+      "serving": "1 Oz (28g)",
+      "nutrients": {
+        "fat": 17,
+        "carbohydrate": 5,
+        "fiber": 3,
+        "sugar": 1,
+        "protein": 4,
+        "sodium": 0,
+        "magnesium": 48.4,
+        "calcium": 34.4,
+        "potassium": 211,
+        "iron": 1.2,
+        "vitaminA": 17.1,
+        "vitaminC": 1.1
+      }
+    },
+{
+      "food": "pecans",
+      "serving": "1 Oz (28g)",
+      "nutrients": {
+        "fat": 21,
+        "carbohydrate": 4,
+        "fiber": 3,
+        "sugar": 1,
+        "protein": 3,
+        "sodium": 0,
+        "magnesium": 37,
+        "calcium": 20.2,
+        "potassium": 119,
+        "iron": 0.8,
+        "vitaminA": 39.2,
+        "vitaminC": 0.2
+      }
+    },
+{
+      "food": "pistachios",
+      "serving": "1 Oz (28g)",
+      "nutrients": {
+        "fat": 13,
+        "carbohydrate": 8,
+        "fiber": 3,
+        "sugar": 2,
+        "protein": 6,
+        "sodium": 3,
+        "magnesium": 33.9,
+        "calcium": 31.1,
+        "potassium": 294,
+        "iron": 1.2,
+        "vitaminA": 74,
+        "vitaminC": 0.6
+      }
+    },
+{
+      "food": "walnut",
+      "serving": "1 Oz (28g)",
+      "nutrients": {
+        "fat": 18,
+        "carbohydrate": 4,
+        "fiber": 2,
+        "sugar": 1,
+        "protein": 4,
+        "sodium": 1,
+        "magnesium": 44.6,
+        "calcium": 27.7,
+        "potassium": 125,
+        "iron": 0.8,
+        "vitaminA": 5.7,
+        "vitaminC": 0.4
+      }
+    },
+{
+      "food": "macadamia",
+      "serving": "1 Oz (28g)",
+      "nutrients": {
+        "fat": 21,
+        "carbohydrate": 4,
+        "fiber": 2,
+        "sugar": 1,
+        "protein": 2,
+        "sodium": 1,
+        "magnesium": 33.3,
+        "calcium": 19.8,
+        "potassium": 103,
+        "iron": 0.7,
+        "vitaminA": 0,
+        "vitaminC": 0.2
+      }
     }
 ]
+}
