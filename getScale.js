@@ -1,5 +1,5 @@
 //function creates food scale based on the nutrient scaleSelection
-function getScale(data, svg, scaleSelection, selectedFood) {
+function getScale(data, svg, scaleSelection) {
     var width = 700,
         height = 500;
   
@@ -15,6 +15,7 @@ function getScale(data, svg, scaleSelection, selectedFood) {
     
     var color = d3.scale.category20b();
     
+  
     var maxElement = d3.max(d3.values(data),function(i){
         return i.nutrients[scaleSelection];});
   
@@ -23,12 +24,14 @@ function getScale(data, svg, scaleSelection, selectedFood) {
     
     var scale = d3.scale.linear()
         .range([margin.left, width-margin.right])
-        .domain([0,maxElement + (5 - maxElement % 5)]);
+        .domain([0,maxElement]);
   
     var exData = extractSelected();
     
     // Define Scales  
-    var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(5).tickFormat(function(d) { return d + "g"; });
+    var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(5).tickFormat(
+      function(d) { return d + units[nutrients.indexOf(scaleSelection)]; }
+    );
     
     var foci = [];
     
