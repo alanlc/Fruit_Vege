@@ -685,7 +685,7 @@
     },
     {
         "food": "apple",
-        "serving": "1 cup (125)",
+        "serving": "1 cup (125g)",
         "nutrients": {
             "fat": 0.2,
             "carbohydrate": 17.3,

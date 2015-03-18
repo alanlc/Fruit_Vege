@@ -468,6 +468,24 @@
         }
     },
     {
+        "food": "date",
+        "serving": "1 cup (144g)",
+        "nutrients": {
+            "fat": 2.4,
+            "carbohydrate": 108.0,
+            "fiber": 9.6,
+            "sugar": 96,
+            "protein": 2.4,
+            "sodium": 1.2,
+            "magnesium": 78,
+            "calcium": 92.4,
+            "potassium": 1002,
+            "iron": 1.2,
+            "vitaminA": 214.8,
+            "vitaminC": 0.0
+        }
+    },
+    {
         "food": "mango",
         "serving": "1 medium (207g)",
         "nutrients": {
