@@ -24,9 +24,9 @@ function initialise(data, svg) {
   for (var i = 0; i < nutrients.length; i++) {
     
     // Create selection menu sections
-    if ((nutrients[i] == "fat") ||
-        (nutrients[i] == "carbohydrate") ||
-        (nutrients[i] == "protein"))
+    if ((nutrients[i] == "fat")
+        ||(nutrients[i] == "carbohydrate")
+        ||(nutrients[i] == "protein"))
     {
         var div = d3.select("#menu")
           .append("div")
