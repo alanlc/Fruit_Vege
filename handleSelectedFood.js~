@@ -8,7 +8,7 @@ function handleSelectedFood(data, index){
       .attr("id", "selected-"+selection.food)
       .attr("value", 1)
       .attr("class", "selected-food-item")
-      .text(selection.food.charAt(0).toUpperCase() + selection.food.slice(1));
+      .text(selection.food);
 
     element.append("div")
       .attr("id", "selected-serving-control")

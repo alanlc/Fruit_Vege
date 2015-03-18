@@ -1,18 +1,11 @@
 function initialise(data, svg) {    
   
   // Create the defailed nutrition box
-  var nutrientchart = d3.select("#nutrients").append("div")
-    .attr("class", "dominant-nutrients")
-    .classed("hidden", true);
-  
-  // Add detailed nutrition info header
-  nutrientchart.append("div")
-      .text("Main Nutrients")
-      .attr
-      ({
-        id: "main-nutrient-item",
-        class: "nutrient-item"
-      });
+  var nutrientchart = d3.select("#overview")
+        .append("div")
+        .attr("class", "food-overview")
+        .attr("id", "foodOverview")
+        .classed("hidden", true);
   
   // Create GDA fulfillment box
   var gda = d3.select("#GDA")
@@ -41,14 +34,6 @@ function initialise(data, svg) {
             div.style("color", "#FF3030");
     }
     
-    // Create detailed info sections
-    nutrientchart.append("div")
-      .text(nutrients[i])
-      .attr
-      ({
-        id: nutrients[i] + "-nutrient-item",
-        class: "nutrient-item"
-      });
     
     // Create GDA Fulfillment sections
     gda.append("div")

@@ -9,7 +9,7 @@ function getScale(data, svg, scaleSelection) {
     {
 		top: 20,
 		bottom: 50,
-		left: 100,
+		left: 40,
 		right: 100
 	};
     
@@ -24,8 +24,16 @@ function getScale(data, svg, scaleSelection) {
     
     var scale = d3.scale.linear()
         .range([margin.left, width-margin.right])
-        .domain([minElement,maxElement]);
+        .domain([0,maxElement]);
   
+    //scales for zooming the svg
+    var y = d3.scale.linear()
+        .domain([0, height])
+        .range([height, 0]);
+    var x = d3.scale.linear()
+        .domain([0, width])
+        .range([0, width]);
+        
     var exData = extractSelected();
     
     // Define Scales  
@@ -33,10 +41,11 @@ function getScale(data, svg, scaleSelection) {
       function(d) { return d + units[nutrients.indexOf(scaleSelection)]; }
     );
     
+    var randY = d3.random.normal(0, 50);
     var foci = [];
     
     for(i=0;i<exData.length;i++) {
-        foci[i] = {x: d3.values(exData)[i].x, y: yHeight};
+        foci[i] = {x: d3.values(exData)[i].x, y: yHeight+randY()};
     }
     
     var force = d3.layout.force()
@@ -71,7 +80,6 @@ function getScale(data, svg, scaleSelection) {
         .on("mouseover", mouseover)
         .on("mouseout", mouseout)
         .on("click", addSelectedFood);
-        //.call(force.drag);
     
     nodes.append("circle")
         .attr("r", radius)
@@ -95,12 +103,23 @@ function getScale(data, svg, scaleSelection) {
             .attr("cy", function(d) { return +d.y; });
     });
     
-    svg.on("mousemove", function()
+    var zoom = d3.behavior.zoom()
+        .x(scale)
+        .scaleExtent([0.8, 16])
+        .on("zoom", zoomed);
+
+    svg.transition()
+        .duration(750)
+        .call(zoom.translate(transform));
+    
+    function zoomed() 
     {
-        //force.resume();
-    });
-    
-    
+        svg.select(".xaxis").call(xAxis);
+        svg.selectAll("circle")
+            .attr("transform", transform);
+        force.resume();
+    }
+
     function addSelectedFood(d)
     {
         handleSelectedFood(data, d.index);
@@ -115,7 +134,8 @@ function getScale(data, svg, scaleSelection) {
             .transition()
             .duration(150)
             .attr("r", radius*1.2);
-        getDominantNutrients(data,d.index);
+            
+        getOverview(data,d.index);
     };
     
     function mouseout()
@@ -126,7 +146,7 @@ function getScale(data, svg, scaleSelection) {
             .duration(150)
             .attr("r", radius);
         
-        d3.select(".dominant-nutrients").classed("hidden", true);
+        d3.select(".food-overview").classed("hidden", true);
     };
     
     function extractSelected()
@@ -139,6 +159,11 @@ function getScale(data, svg, scaleSelection) {
             dd[i] = {x: data[i].nutrients[scaleSelection], y: yHeight};
         }
         return dd;
+    }
+    
+    function transform(d) 
+    {
+        return "translate(" + x(d[0]) + "," + y(d[1]) + ")";
     }
     
     function cluster(alpha) 
