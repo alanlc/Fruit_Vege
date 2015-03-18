@@ -1,10 +1,8 @@
 function getOverview(data, foodIndex)
 {
     var serving = data[foodIndex].serving;
-    var food = data[foodIndex].food;
-    
-    food = food.charAt(0).toUpperCase() + food.slice(1)
-    
+    var food = titleCase(data[foodIndex].food.replace("-", " "));
+        
     d3.select("#foodOverview")
         .html("<span class=\"food-overview-food\">"
             + food + "</span><br>"

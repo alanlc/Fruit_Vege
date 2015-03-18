@@ -8,7 +8,7 @@ function handleSelectedFood(data, index){
       .attr("id", "selected-"+selection.food)
       .attr("value", 1)
       .attr("class", "selected-food-item")
-      .text(selection.food.charAt(0).toUpperCase() + selection.food.slice(1));
+      .text(titleCase(selection.food.replace("-", " ")));
 
     element.append("div")
       .attr("id", "selected-serving-control")
@@ -59,11 +59,14 @@ function handleSelectedFood(data, index){
   } else {
     
     var element = d3.select("#selected-"+selection.food);
-    
     element.attr("value", +element.attr("value")+1)
       .select("#amount")
       .text(element.attr("value"));
     
     selected_foods[index] += 1;
   }
+}
+
+function titleCase(str){
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }

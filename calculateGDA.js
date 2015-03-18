@@ -18,7 +18,7 @@ function calculateGDA(data, index, insert) {
       var newvalue = +oldvalue.text().slice(0, - 1) + ((insert ? 1 : -1)
                         * Math.round((nutrientdata[nutrientkeys[i]] / gda[i]) * 100));
       elem.style("width", Math.min(scale(newvalue), width) + "px")
-          .style("background-color", "#5A4747");
+          .style("background-color", "#77DD77");
       oldvalue.text(newvalue + "%");
     }
   }

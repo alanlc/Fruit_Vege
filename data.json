@@ -216,7 +216,7 @@
         }
     },
     {
-        "food": "brussel sprouts",
+        "food": "brussel-sprouts",
         "serving": "1 Cup (88g)",
         "nutrients": {
             "fat": 0.3,
@@ -306,7 +306,7 @@
         }
     },
     {
-        "food": "hemp seeds",
+        "food": "hemp-seeds",
         "serving": "1 Cup (120g)",
         "nutrients": {
             "fat": 54.0,

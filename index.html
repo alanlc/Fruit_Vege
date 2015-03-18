@@ -86,15 +86,14 @@
     /* Selected Foods */
     .selected-food-item{
         font-size: 10px;
-        width: 200px;
+        width: 220px;
         display: table;
         line-height: 1;
         font-weight: bold;
-        padding: 6px;
-        padding-right: 0px;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        border-bottom: 1px solid;
+        margin: 3px;
+        padding: 5px 0px 5px 5px;
+        color: #333;
+        background-color: #ccc;
     }
     
     .selected-food-serving{
@@ -112,12 +111,16 @@
         font-family: "Lucida Console", Monaco, monospace;
         font-size: 10px;
         display: inline;
+        cursor: default;
+        margin-left: 3px;
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 10px;
         padding-right: 10px;
-        background-color: rgba(100, 0, 0, 0.7);
-        border-left: 1px solid;
+        background-color: rgba(255, 0, 0, 0.5);
+        -webkit-user-select: none; /* Chrome/Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+ */    
     }
   
     /* GDA Section */
@@ -129,19 +132,18 @@
         display: table;
         line-height: 2;
         font-weight: bold;
-        padding: 6px;
-        padding-right: 4px;
-        padding-left: 2px;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        border-bottom: 1px solid;
+        padding: 12px;
+        color: #000;
+        border: 1px solid;
     }
     
     .gda-nutrient
     {
         font-size: 12px;
+        margin: 2px;
         width: 105px;
-        background-color: #5A4747;
+        color: #333;
+        background-color: #ccc;
     }
     
     .gda-percentage
