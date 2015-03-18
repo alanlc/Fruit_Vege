@@ -21,9 +21,10 @@ function handleSelectedFood(data, index){
       .text("+")
       .on("click", function()
       {
-          element.attr("value", +element.attr("value")+1)
+          selected_foods[index] += 1;
+          element.attr("value", selected_foods[index])
               .select("#amount")
-              .text(element.attr("value"));
+              .text(selected_foods[index] + " Cups");
 
           calculateGDA(data, index, true);
       });
@@ -35,10 +36,11 @@ function handleSelectedFood(data, index){
       .text("-")
       .on("click", function()
       {
+          selected_foods[index] -= 1;
           element
-              .attr("value", +element.attr("value")-1)
+              .attr("value", selected_foods[index])
               .select("#amount")
-              .text(element.attr("value"));
+              .text(selected_foods[index] + " Cup" + (selected_foods[index] == 1 ? "" : "s"));
 
           if (element.attr("value") == "0")
           {
@@ -54,16 +56,17 @@ function handleSelectedFood(data, index){
       .append("span")
       .attr("id", "amount")
       .attr("class", "selected-food-serving")
-      .text(element.attr("value"));
+      .text(selected_foods[index] + " Cup");
     
   } else {
     
-    var element = d3.select("#selected-"+selection.food);
-    element.attr("value", +element.attr("value")+1)
-      .select("#amount")
-      .text(element.attr("value"));
-    
     selected_foods[index] += 1;
+    
+    var element = d3.select("#selected-"+selection.food);
+    element.attr("value", selected_foods[index])
+      .select("#amount")
+      .text(selected_foods[index] + " Cups");
+    
   }
 }
 
