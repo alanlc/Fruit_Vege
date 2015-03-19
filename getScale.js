@@ -23,7 +23,7 @@ function getScale(data, svg, scaleSelection) {
     
     var scale = d3.scale.linear()
         .range([margin.left, width-margin.right])
-        .domain([-20,maxElement]);
+        .domain([-maxElement/4,maxElement]);
   
     //scales for zooming the svg
     var y = d3.scale.linear()

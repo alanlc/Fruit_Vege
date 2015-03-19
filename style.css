@@ -10,6 +10,7 @@
     #header {
       height: 55px;
       margin: 0px;
+      margin-bottom: 35px;
     }
     #header h1 {
       text-align: center;
@@ -17,6 +18,15 @@
       margin: 0px;
       font-weight:normal;
       color: #212121;
+    }
+    #header h4 {
+      text-align: center;
+      padding-top: 10px;
+      font-size: 14px;
+      margin: 0px;
+      color: #666;
+      font-style: italic;
+      font-weight:normal;
     }
     #main-container {
       min-width: 600px;

@@ -75,11 +75,11 @@ function initialise(data, svg) {
     if (targetid && targetid != selected_nutrient) {
       
       // Set all backgrounds to default
-      d3.selectAll(".menu-item")
-        .style("color", "#fff");
+      d3.selectAll(".gda-nutrient")
+        .style("color", "#000");
 
       // Set selected box to highlighted color
-      d3.select("#" + targetid)
+      d3.select("#gda-" + targetid+" .gda-nutrient")
         .transition()
         .duration(100)
         .style("color", "#FF3030");
