@@ -13,8 +13,7 @@ function getScale(data, svg, scaleSelection) {
 		right: 100
 	};
     
-    var color = d3.scale.category20b();
-    var radius = 10;
+    var radius = 20;
   
     var maxElement = d3.max(d3.values(data),function(i){
         return i.nutrients[scaleSelection];});
@@ -24,7 +23,7 @@ function getScale(data, svg, scaleSelection) {
     
     var scale = d3.scale.linear()
         .range([margin.left, width-margin.right])
-        .domain([0,maxElement]);
+        .domain([-20,maxElement]);
   
     //scales for zooming the svg
     var y = d3.scale.linear()
@@ -72,33 +71,45 @@ function getScale(data, svg, scaleSelection) {
         .style("text-anchor", "end")
         .attr("font-size", "16px");
   
+    // Create node element
     var nodes = svg.selectAll(".force-scale-node")
-        .data(force.nodes())
-        .enter()
-        .append("g")
-        .attr("class", "force-scale-node")
-        .on("mouseover", mouseover)
-        .on("mouseout", mouseout)
-        .on("click", addSelectedFood);
+      .data(force.nodes())
+      .enter()
+      .append("g")
+      .attr("class", "force-scale-node")
+      .on("mouseover", mouseover)
+      .on("mouseout", mouseout)
+      .on("click", addSelectedFood);
     
+    // Add circle background to node
     nodes.append("circle")
-        .attr("r", radius)
-        .attr("fill", function(d, i) 
-        {
-            return color(i);
-        })
-        .transition()
-        .duration(1000)
-        .attrTween("r", function(d) {
-          var i = d3.interpolate(0, radius);
-          return function(t) { return i(t); };
-        });
+      .attr("r", radius)
+      .attr("class", "circle-node")
+      .attr("fill", function(d, i) 
+      {
+          return colors[data[d.index].type];
+      })
+      .transition()
+      .duration(1000)
+      .attrTween("r", function(d) {
+        var i = d3.interpolate(0, radius);
+        return function(t) { return i(t); };
+      });
+  
+    // Add image to node
+    nodes.append("image")
+      .attr("xlink:href", function (d){ return "images/" + data[d.index].food + ".png"; })
+      .attr("class", "circle-node")
+      .attr("width", 50)
+      .attr("height", 50);
     
     force.on("tick", function(e)
     {   
-        svg.selectAll("circle")
+        svg.selectAll(".circle-node")
             .each(cluster(10*e.alpha*e.alpha))
             .each(collide(0.5))
+            .attr("x", function(d) { return +d.x - (radius * 4/3); })
+            .attr("y", function(d) { return +d.y - (radius * 4/3); })
             .attr("cx", function(d) { return +d.x; })
             .attr("cy", function(d) { return +d.y; });
     });
@@ -131,7 +142,7 @@ function getScale(data, svg, scaleSelection) {
             .select("circle")
             .transition()
             .duration(150)
-            .attr("r", radius*1.2);
+            .attr("r", radius*1.3);
             
         getOverview(data,d.index);
     };

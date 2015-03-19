@@ -8,7 +8,10 @@ function initialise(data, svg) {
         .classed("hidden", true);
   
   // Create GDA fulfillment box
-  var gda = d3.select("#gda");
+  var gda = d3.select("#gda")
+        .append("div")
+        .attr("class", "gda")
+        .text("Guidline Amount Fulfillment");
   
   // Create the selection menu, defailed info box, GDA fulfillment box
   for (var i = 0; i < nutrients.length; i++) {
@@ -43,6 +46,8 @@ function initialise(data, svg) {
       .attr("class", "gda-percentage")
       .text("0%");
   }
+  
+  gda.append("div").attr("id", "selected");
 
   // Fired when a menu box is selected
   function mouseclick() {

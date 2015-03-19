@@ -23,20 +23,18 @@
       margin: 0px;
       color: #212121;
     }
-    #container {
+    #main-container {
       min-width: 600px;
-      width: 90%;
-      margin: auto;
-      margin-top: 30px;
-      padding: 20px;
-      background-color: #FFF;
-      box-shadow: 0px 0px 5px 1px #ccc;
-      border-radius: 2px;
+      height:550px;
     }
     #display {
       display:inline-block;
-      float: left;
+      margin-left: auto;
+      margin-right: auto;
       width: 50%
+    }
+    #selected {
+      margin-top: 20px;
     }
     #nutrients {
       margin-top: 50px;
@@ -96,6 +94,17 @@
         -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* IE10+ */    
     }
+  
+    .page-container {
+      min-width: 600px;
+      width: 90%;
+      margin: auto;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #FFF;
+      box-shadow: 0px 0px 5px 1px #ccc;
+      border-radius: 2px;
+    }
     
     /* Selected Foods */
     .selected-food-item{
@@ -142,6 +151,7 @@
     #gda {
         font-size: 15px;
         width: 200px;
+        float: right;
         display: table;
         line-height: 2;
         font-weight: bold;
@@ -179,14 +189,13 @@
 </head>
 <body>
   <div id="header"><h1>Inside Fruits and Vegetables</h1></div>
-  <div id="container">
+  <div id="main-container" class="page-container">
     <div id="menu"></div>
     <div id="display"></div>
     <div id="gda"></div>
-    <div id="selected"></div>
     <div id="overview"></div>
   </div>
-  <div id="container">
+  <div class="page-container">
     <div id="info">
       <h3>Code Sources:</h3>
       <p>
@@ -219,6 +228,7 @@
     // Global Variables
     var selected_nutrient = "fat";
     var selected_foods = {};
+    var colors = {"vegetable" : d3.rgb(82, 84, 163), "fruit" : d3.rgb(181, 207, 107), "nut" : d3.rgb(231, 203, 148)};
     var nutrients = ["fat", "carbohydrate", "fiber","sugar","protein","sodium","magnesium","calcium","potassium","iron","vitaminA","vitaminC"];
     var units = ["g", "g", "g","g","g","mg","mg","mg","mg","mg"," IU","mg"];
     var gda = [65,300,25,90,50,2400,400,1000,4700,18,3000,60];
