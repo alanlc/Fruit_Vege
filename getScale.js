@@ -37,7 +37,7 @@ function getScale(data, svg, scaleSelection) {
     
     // Define Scales  
     var xAxis = d3.svg.axis().scale(scale).orient("bottom").tickPadding(5).tickFormat(
-      function(d) { return d + units[nutrients.indexOf(scaleSelection)]; }
+      function(d) { return d < 0 ? "" : d + units[nutrients.indexOf(scaleSelection)]; }
     );
     
     // Set scale value
