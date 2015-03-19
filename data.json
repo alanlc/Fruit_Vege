@@ -1,6 +1,7 @@
 [
     {
         "food": "kale",
+        "type": "vegetable",
         "serving": "1 Cup (67g)",
         "nutrients": {
             "fat": 0.5,
@@ -19,6 +20,7 @@
     },
     {
         "food": "spinach",
+        "type": "vegetable",
         "serving": "1 Cup (30g)",
         "nutrients": {
             "fat": 0.1,
@@ -37,6 +39,7 @@
     },
     {
         "food": "lettuce",
+        "type": "vegetable",
         "serving": "1 Cup (47g)",
         "nutrients": {
             "fat": 0.1,
@@ -55,6 +58,7 @@
     },
     {
         "food": "carrot",
+        "type": "vegetable",
         "serving": "1 Cup (128g)",
         "nutrients": {
             "fat": 0.3,
@@ -73,6 +77,7 @@
     },
     {
         "food": "beets",
+        "type": "vegetable",
         "serving": "1 Cup (136g)",
         "nutrients": {
             "fat": 0.2,
@@ -91,6 +96,7 @@
     },
     {
         "food": "asparagus",
+        "type": "vegetable",
         "serving": "1 Cup (134g)",
         "nutrients": {
             "fat": 0.2,
@@ -109,6 +115,7 @@
     },
     {
         "food": "broccoli",
+        "type": "vegetable",
         "serving": "1 Cup (91g)",
         "nutrients": {
             "fat": 0.3,
@@ -127,6 +134,7 @@
     },
     {
         "food": "cauliflower",
+        "type": "vegetable",
         "serving": "1 Cup (100g)",
         "nutrients": {
             "fat": 0.1,
@@ -145,6 +153,7 @@
     },
     {
         "food": "cabbage",
+        "type": "vegetable",
         "serving": "1 Cup (89g)",
         "nutrients": {
             "fat": 0.1,
@@ -163,6 +172,7 @@
     },
     {
         "food": "celery",
+        "type": "vegetable",
         "serving": "1 Cup (101g)",
         "nutrients": {
             "fat": 0.2,
@@ -181,6 +191,7 @@
     },
     {
         "food": "zucchini",
+        "type": "vegetable",
         "serving": "1 Cup (124g)",
         "nutrients": {
             "fat": 0.2,
@@ -199,6 +210,7 @@
     },
     {
         "food": "jalapeno",
+        "type": "vegetable",
         "serving": "1 Cup (90g)",
         "nutrients": {
             "fat": 0.6,
@@ -217,6 +229,7 @@
     },
     {
         "food": "brussel-sprouts",
+        "type": "vegetable",
         "serving": "1 Cup (88g)",
         "nutrients": {
             "fat": 0.3,
@@ -235,6 +248,7 @@
     },
     {
         "food": "radish",
+        "type": "vegetable",
         "serving": "1 Cup (116g)",
         "nutrients": {
             "fat": 0.1,
@@ -253,6 +267,7 @@
     },
     {
         "food": "coconut",
+        "type": "nut",
         "serving": "1 Cup (80g)",
         "nutrients": {
             "fat": 26.8,
@@ -271,6 +286,7 @@
     },
     {
         "food": "almond",
+        "type": "nut",
         "serving": "1 Cup (143g)",
         "nutrients": {
             "fat": 70.7,
@@ -289,6 +305,7 @@
     },
     {
         "food": "cashew",
+        "type": "nut",
         "serving": "1 Cup (150g)",
         "nutrients": {
             "fat": 65.7,
@@ -307,6 +324,7 @@
     },
     {
         "food": "hemp-seed",
+        "type": "nut",
         "serving": "1 Cup (120g)",
         "nutrients": {
             "fat": 54.0,
@@ -325,6 +343,7 @@
     },
     {
         "food": "peanut",
+        "type": "nut",
         "serving": "1 Cup (146g)",
         "nutrients": {
             "fat": 72.5,
@@ -343,6 +362,7 @@
     },
     {
         "food": "chestnut",
+        "type": "nut",
         "serving": "1 Cup (145g)",
         "nutrients": {
             "fat": 3.3,
@@ -361,6 +381,7 @@
     },
     {
         "food": "hazelnut",
+        "type": "nut",
         "serving": "1 Cup (115g)",
         "nutrients": {
             "fat": 69.9,
@@ -379,6 +400,7 @@
     },
     {
         "food": "pecan",
+        "type": "nut",
         "serving": "1 Cup (109g)",
         "nutrients": {
             "fat": 78.5,
@@ -397,6 +419,7 @@
     },
     {
         "food": "pistachio",
+        "type": "nut",
         "serving": "1 Cup (123g)",
         "nutrients": {
             "fat": 54.7,
@@ -415,6 +438,7 @@
     },
     {
         "food": "walnut",
+        "type": "nut",
         "serving": "1 Cup (117g)",
         "nutrients": {
             "fat": 76.3,
@@ -433,6 +457,7 @@
     },
     {
         "food": "macadamia",
+        "type": "nut",
         "serving": "1 Cup (134g)",
         "nutrients": {
             "fat": 102,
@@ -451,6 +476,7 @@
     },
     {
         "food": "banana",
+        "type": "fruit",
         "serving": "1 Cup (225g)",
         "nutrients": {
             "fat": 0.74,
@@ -469,6 +495,7 @@
     },
     {
         "food": "date",
+        "type": "fruit",
         "serving": "1 Cup (147g)",
         "nutrients": {
             "fat": 0.6,
@@ -487,6 +514,7 @@
     },
     {
         "food": "mango",
+        "type": "fruit",
         "serving": "1 medium (207g)",
         "nutrients": {
             "fat": 0.6,
@@ -505,6 +533,7 @@
     },
     {
         "food": "pineapple",
+        "type": "fruit",
         "serving": "1 Cup (165g)",
         "nutrients": {
             "fat": 0.2,
@@ -522,7 +551,8 @@
         }
     },
     {
-        "food": "grape",
+        "food": "grapes",
+        "type": "fruit",
         "serving": "1 Cup (92g)",
         "nutrients": {
             "fat": 0.3,
@@ -541,6 +571,7 @@
     },
     {
         "food": "strawberry",
+        "type": "fruit",
         "serving": "1 Cup (144g)",
         "nutrients": {
             "fat": 0.4,
@@ -559,6 +590,7 @@
     },
     {
         "food": "blueberry",
+        "type": "fruit",
         "serving": "1 Cup (148g)",
         "nutrients": {
             "fat": 0.5,
@@ -577,6 +609,7 @@
     },
     {
         "food": "raspberry",
+        "type": "fruit",
         "serving": "1 Cup (123g)",
         "nutrients": {
             "fat": 0.8,
@@ -595,6 +628,7 @@
     },
     {
         "food": "blackberry",
+        "type": "fruit",
         "serving": "1 Cup (144g)",
         "nutrients": {
             "fat": 0.7,
@@ -613,6 +647,7 @@
     },
     {
         "food": "papaya",
+        "type": "fruit",
         "serving": "1 Cup (140g)",
         "nutrients": {
             "fat": 0.2,
@@ -631,6 +666,7 @@
     },
     {
         "food": "honeydew",
+        "type": "fruit",
         "serving": "1 Cup (170g)",
         "nutrients": {
             "fat": 0.2,
@@ -649,6 +685,7 @@
     },
     {
         "food": "cantaloupe",
+        "type": "fruit",
         "serving": "1 Cup (160g)",
         "nutrients": {
             "fat": 0.3,
@@ -667,6 +704,7 @@
     },
     {
         "food": "watermelon",
+        "type": "fruit",
         "serving": "1 Cup (152g)",
         "nutrients": {
             "fat": 0.2,
@@ -685,6 +723,7 @@
     },
     {
         "food": "avocado",
+        "type": "vegetable",
         "serving": "1 Cup (150g)",
         "nutrients": {
             "fat": 22,
@@ -703,6 +742,7 @@
     },
     {
         "food": "apple",
+        "type": "fruit",
         "serving": "1 Cup (125g)",
         "nutrients": {
             "fat": 0.2,
@@ -721,6 +761,7 @@
     },
     {
         "food": "fig",
+        "type": "fruit",
         "serving": "1 large (64g)",
         "nutrients": {
             "fat": 0.2,
@@ -739,6 +780,7 @@
     },
     {
         "food": "orange",
+        "type": "fruit",
         "serving": "1 Cup (180g)",
         "nutrients": {
             "fat": 0.2,
@@ -757,6 +799,7 @@
     },
     {
         "food": "lemon",
+        "type": "fruit",
         "serving": "1 Cup (212g)",
         "nutrients": {
             "fat": 0.6,
@@ -775,6 +818,7 @@
     },
     {
         "food": "grapefruit",
+        "type": "fruit",
         "serving": "1 Cup (230g)",
         "nutrients": {
             "fat": 0.2,
@@ -793,6 +837,7 @@
     },
     {
         "food": "kiwi",
+        "type": "fruit",
         "serving": "1 Cup (177g)",
         "nutrients": {
             "fat": 0.9,
@@ -811,6 +856,7 @@
     },
     {
         "food": "peach",
+        "type": "fruit",
         "serving": "1 large (175g)",
         "nutrients": {
             "fat": 0.4,
@@ -829,6 +875,7 @@
     },
     {
         "food": "pomegranate",
+        "type": "fruit",
         "serving": "1/2 medium (141g)",
         "nutrients": {
             "fat": 1.6,
@@ -847,6 +894,7 @@
     },
     {
         "food": "tomato",
+        "type": "vegetable",
         "serving": "1 Cup (180g)",
         "nutrients": {
             "fat": 0.4,
@@ -865,6 +913,7 @@
     },
     {
         "food": "olive",
+        "type": "fruit",
         "serving": "1 ounce (28g)",
         "nutrients": {
             "fat": 3,
@@ -883,6 +932,7 @@
     },
     {
         "food": "cucumber",
+        "type": "fruit",
         "serving": "1 Cup (104g)",
         "nutrients": {
             "fat": 0.2,
