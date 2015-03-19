@@ -2,13 +2,13 @@ function calculateGDA(data, index, insert) {
   
   // Initialise the nutrient data variables
   var nutrientdata = data[index].nutrients;
-  var nutrientkeys = d3.keys(nutrientdata);
+  var nutrientkeys = nutrients;
   
   for (var i = 0; i < nutrients.length; i++) {
 
     if (nutrientdata[nutrientkeys[i]] != null){
       var elem = d3.select("#gda-" + nutrientkeys[i]);
-      
+      console.log(nutrientkeys[i] + " " + nutrientdata[nutrientkeys[i]] + " " +gda[i]);
       // Update GDA Percentage and Amount
       var gdapercent = elem.select(".gda-percentage");
       var newpc = +gdapercent.attr("value") + ((insert ? 1 : -1)
