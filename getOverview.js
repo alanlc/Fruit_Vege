@@ -1,14 +1,14 @@
 function getOverview(data, foodIndex)
 {
-    var serving = data[foodIndex].serving;
+    var serving = data[foodIndex]["cup-weight"];
     var food = titleCase(data[foodIndex].food.replace("-", " "));
         
     d3.select("#foodOverview")
         .html("<span class=\"food-overview-food\">"
             + food + "</span><br>"
-            + "Serving Size: "
+            + "Cup Weight: "
             + "<span class=\"food-overview-serving\">"
-            + serving + "</span>");
+            + serving + "g</span>");
         
     var xPos = d3.event.pageX;
     var yPos = d3.event.pageY;
