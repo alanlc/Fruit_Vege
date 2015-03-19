@@ -6,7 +6,7 @@ function getOverview(data, foodIndex)
   d3.select("#foodOverview")
         .html("<span class=\"food-overview-food\">"
             + food + "</span><br>"
-            + selected_nutrient.charAt(0).toUpperCase() + selected_nutrient.slice(1).replace("C", " C").replace("A", " A") +":&nbsp;" + data[foodIndex].nutrients[selected_nutrient] + units[nutrients.indexOf(selected_nutrient)] + "<br />"
+            + selected_nutrient.charAt(0).toUpperCase() + selected_nutrient.slice(1).replace("C", " C").replace("A", " A") +":&nbsp;" + data[foodIndex].nutrients[selected_nutrient] + units[nutrients.indexOf(selected_nutrient)] + "&nbsp;("+ Math.round(data[foodIndex].nutrients[selected_nutrient] / gda[nutrients.indexOf(selected_nutrient)] * 100) + "%)<br />"
             + "Cup Weight:&nbsp;"
             + "<span class=\"food-overview-serving\">"
             + serving + "g</span>");
