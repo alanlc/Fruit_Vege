@@ -1,10 +1,4 @@
 function calculateGDA(data, index, insert) {
-    
-  var width = 200;
-
-  var scale = d3.scale.linear()
-      .range([105, 200])
-      .domain([0,100]);
   
   // Initialise the nutrient data variables
   var nutrientdata = data[index].nutrients;

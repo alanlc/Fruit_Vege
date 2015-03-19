@@ -201,7 +201,7 @@
     },
     {
         "food": "zucchini",
-        "type": "vegetable",
+        "type": "fruit",
         "serving": "1 Cup",
         "cup-weight": "124",
         "nutrients": {
@@ -221,7 +221,7 @@
     },
     {
         "food": "jalapeno",
-        "type": "vegetable",
+        "type": "fruit",
         "serving": "1 Cup",
         "cup-weight": "90",
         "nutrients": {
@@ -542,21 +542,21 @@
     {
         "food": "mango",
         "type": "fruit",
-        "serving": "1 Cup",
+        "serving": "1 cup",
         "cup-weight": "165",
         "nutrients": {
-            "fat": 0.6,
-            "carbohydrate": 24.7,
-            "fiber": 2.6,
-            "sugar": 22.5,
-            "protein": 1.4,
-            "sodium": 2,
-            "magnesium": 16,
-            "calcium": 18,
-            "potassium": 277,
-            "iron": 0.3,
-            "vitaminA": 1785,
-            "vitaminC": 60.1
+            "fat": 0.4,
+            "carbohydrate": 28.1,
+            "fiber": 3.0,
+            "sugar": 24.4,
+            "protein": 0.8,
+            "sodium": 3.3,
+            "magnesium": 14.8,
+            "calcium": 16.5,
+            "potassium": 257,
+            "iron": 0.2,
+            "vitaminA": 1262,
+            "vitaminC": 45.7
         }
     },
     {
@@ -583,7 +583,7 @@
         "food": "grapes",
         "type": "fruit",
         "serving": "1 Cup",
-        "cup-weight": "92",
+        "cup-weight": "92g",
         "nutrients": {
             "fat": 0.3,
             "carbohydrate": 15.8,
@@ -761,7 +761,7 @@
     },
     {
         "food": "avocado",
-        "type": "vegetable",
+        "type": "fruit",
         "serving": "1 Cup",
         "cup-weight": "150",
         "nutrients": {
@@ -802,21 +802,21 @@
     {
         "food": "fig",
         "type": "fruit",
-        "serving": "1 Cup",
+        "serving": "1 cup",
         "cup-weight": "150",
         "nutrients": {
-            "fat": 0.45,
+            "fat": 0.5,
             "carbohydrate": 28.8,
-            "fiber": 4.4,
-            "sugar": 24.4,
-            "protein": 1.1,
-            "sodium": 1.5,
+            "fiber": 4.5,
+            "sugar": 24.3,
+            "protein": 1.2,
+            "sodium": 1.4,
             "magnesium": 25.5,
-            "calcium": 52.5,
-            "potassium": 348,
-            "iron": 0.6,
-            "vitaminA": 213,
-            "vitaminC": 3
+            "calcium": 52.4,
+            "potassium": 348.7,
+            "iron": 0.5,
+            "vitaminA": 212.7,
+            "vitaminC": 3.0
         }
     },
     {
@@ -902,46 +902,46 @@
     {
         "food": "peach",
         "type": "fruit",
-        "serving": "1 large",
-        "cup-weight": "175",
+        "serving": "1 cup",
+        "cup-weight": "154",
         "nutrients": {
             "fat": 0.4,
-            "carbohydrate": 17.3,
-            "fiber": 2.6,
-            "sugar": 14.7,
-            "protein": 1.6,
+            "carbohydrate": 15.2,
+            "fiber": 2.3,
+            "sugar": 12.9,
+            "protein": 1.4,
             "sodium": 0,
-            "magnesium": 15.7,
-            "calcium": 10.5,
-            "potassium": 333,
+            "magnesium": 13.9,
+            "calcium": 9.2,
+            "potassium": 293,
             "iron": 0.4,
-            "vitaminA": 570,
-            "vitaminC": 11.6
+            "vitaminA": 502,
+            "vitaminC": 10.2
         }
     },
     {
         "food": "pomegranate",
         "type": "fruit",
-        "serving": "1/2 medium",
-        "cup-weight": "141",
+        "serving": "1 cup",
+        "cup-weight": "174",
         "nutrients": {
-            "fat": 1.6,
-            "carbohydrate": 26.3,
-            "fiber": 5.6,
-            "sugar": 19.7,
-            "protein": 2.3,
-            "sodium": 4.2,
-            "magnesium": 16.9,
-            "calcium": 19.1,
-            "potassium": 333,
-            "iron": 0.4,
+            "fat": 2.0,
+            "carbohydrate": 32.6,
+            "fiber": 7.0,
+            "sugar": 23.8,
+            "protein": 3.0,
+            "sodium": 5.2,
+            "magnesium": 20.8,
+            "calcium": 17.4,
+            "potassium": 410,
+            "iron": 0.6,
             "vitaminA": 0,
-            "vitaminC": 14.4
+            "vitaminC": 17.8
         }
     },
     {
         "food": "tomato",
-        "type": "vegetable",
+        "type": "fruit",
         "serving": "1 Cup",
         "cup-weight": "180",
         "nutrients": {
@@ -962,26 +962,26 @@
     {
         "food": "olive",
         "type": "fruit",
-        "serving": "1 ounce",
-        "cup-weight": "28",
+        "serving": "1 cup",
+        "cup-weight": "180",
         "nutrients": {
-            "fat": 3,
-            "carbohydrate": 1.8,
-            "fiber": 0.9,
+            "fat": 19.3,
+            "carbohydrate": 11.6,
+            "fiber": 5.8,
             "sugar": 0,
-            "protein": 0.2,
-            "sodium": 190,
-            "magnesium": 1.1,
-            "calcium": 24.6,
-            "potassium": 2.2,
-            "iron": 0.9,
-            "vitaminA": 113,
-            "vitaminC": 0.3
+            "protein": 1.3,
+            "sodium": 1221.7,
+            "magnesium": 7.1,
+            "calcium": 158.2,
+            "potassium": 14.2,
+            "iron": 5.8,
+            "vitaminA": 726.6,
+            "vitaminC": 1.9
         }
     },
     {
         "food": "cucumber",
-        "type": "vegetable",
+        "type": "fruit",
         "serving": "1 Cup",
         "cup-weight": "104",
         "nutrients": {

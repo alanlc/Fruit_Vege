@@ -1,6 +1,6 @@
 //function creates food scale based on the nutrient scaleSelection
 function getScale(data, svg, scaleSelection) {
-    var width = 700,
+    var width = parseInt(d3.select("#display").style("width"), 10),
         height = 500;
   
     var yHeight = 300;
@@ -10,7 +10,7 @@ function getScale(data, svg, scaleSelection) {
 		top: 20,
 		bottom: 50,
 		left: 40,
-		right: 100
+		right: 50
 	};
     
     var radius = 20;
