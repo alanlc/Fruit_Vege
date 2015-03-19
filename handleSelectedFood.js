@@ -8,7 +8,7 @@ function handleSelectedFood(data, index){
       .attr("id", "selected-"+selection.food)
       .attr("value", 1)
       .attr("class", "selected-food-item")
-      .text(titleCase(selection.food.replace("-", " ")));
+      .html("<img src=\"images/"+selection.food+".png\" style=\"img-"+selection.type+"\" />"+titleCase(selection.food.replace("-", " ")));
 
     element.append("div")
       .attr("id", "selected-serving-control")

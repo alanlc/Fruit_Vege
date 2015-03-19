@@ -21,6 +21,7 @@
       text-align: center;
       padding-top: 25px;
       margin: 0px;
+      font-weight:normal;
       color: #212121;
     }
     #main-container {
@@ -28,19 +29,35 @@
       height:550px;
     }
     #display {
-      display:inline-block;
+      display: inline-block;
+      box-shadow: 0px 0px 2px 2px rgb(240,240,240);
+      border-radius: 2px;
       margin-left: auto;
       margin-right: auto;
-      width: 50%
     }
-    #selected {
-      margin-top: 20px;
+    #display-header {
+      padding: 12px;
+      font-size: 18px;
+              border-bottom: 1.5px solid #ddd;
+
+    }
+    #sidebar {
+      width: 380px;
+      float: right;
+      display: inline-block;
     }
     #nutrients {
       margin-top: 50px;
       display:inline-block;
       float: right;
       width: 50%
+    }
+    #info {
+      box-shadow: 0px 0px 2px 2px rgb(240,240,240);
+      border-radius: 2px;
+      padding: 10px;
+      margin: 20px 0px;
+      width: 500px;
     }
   
     /* Force-scale styles */
@@ -101,34 +118,35 @@
       margin: auto;
       margin-top: 30px;
       padding: 20px;
-      background-color: #FFF;
-      box-shadow: 0px 0px 5px 1px #ccc;
-      border-radius: 2px;
     }
     
     /* Selected Foods */
     .selected-food-item{
-        font-size: 10px;
-        width: 220px;
-        display: table;
-        line-height: 1;
-        font-weight: bold;
-        margin: 3px;
-        padding: 5px 0px 5px 5px;
-        color: #333;
-        background-color: #ccc;
+        overflow: auto;
+        background-color: #fafafa;
+        border-top: 1px solid #ebebeb;
+        font-size: 13px;
+        padding: 0px 15px;
     }
-    
+  
+    .selected-food-item img {
+      vertical-align:middle;
+      margin-left: -10px;
+      margin-right: 5px;
+      width: 35px;
+      height: 35px;
+    }    
     .selected-food-serving{
-        width: 45px;
+        padding-right:5px;
         float: right;
         text-align: left;
+        line-height: 35px;
     }
     
     .selected-food-control{
         float: right;
         display: inline;
-        padding: 0px;
+        line-height: 35px;
     }
     
     .selected-plusminus{
@@ -141,7 +159,10 @@
         padding-bottom: 5px;
         padding-left: 10px;
         padding-right: 10px;
-        background-color: rgba(255, 0, 0, 0.5);
+        font-weight: bold;
+        color: #fefefe;
+        border-radius: 3px;
+        background-color: rgba(50,50,50, 0.5);
         -webkit-user-select: none; /* Chrome/Safari */        
         -moz-user-select: none; /* Firefox */
         -ms-user-select: none; /* IE10+ */    
@@ -149,29 +170,82 @@
   
     /* GDA Section */
     #gda {
-        font-size: 15px;
-        width: 200px;
-        float: right;
-        display: table;
-        line-height: 2;
-        font-weight: bold;
-        padding: 12px;
+        box-shadow: 0px 0px 2px 2px rgb(240,240,240);
+        border-radius: 2px;
         color: #000;
-        border: 1px solid;
+        width: 90%;
+        display:inline-block;
+    }
+    #gda-slider {
+      display:inline-block;
+      border: none;
+      margin-right:10px;
+      width: 5px;
+      background-color:#ccc;
+      margin-bottom:70px;
+      height: 195px;
+    }
+    .gda-header {
+        padding: 12px;
+        font-size: 18px;
+        border-bottom: 1.5px solid #ddd;
+    }
+    .gda-nutrient-container {
+        overflow: auto;
+        background-color: #fafafa;
+        border-top: 1px solid #ebebeb;
+        font-size: 13px;
+        padding: 6px 15px;
     }
     .gda-nutrient {
-        font-size: 12px;
-        margin: 2px;
-        width: 105px;
-        color: #333;
-        background-color: #ccc;
+      font-weight: bold;
     }
-    
-    .gda-percentage
-    {
+    .gda-amount {
+      padding-left: 6px;
+    }
+    .gda-percentage {
         float: right;
-        color: rgba(100, 0, 0, 0.7);
-        padding-right: 5px;
+    }
+  
+    /* Vitamin Container */
+    .vitamin-container {
+      padding: 0px;
+    }
+    #vitaminA-container {
+        border-top: 2px solid #ddd;
+    }
+    .vitamin-container div {
+      display: inline-block;
+      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+      box-sizing: border-box;         /* Opera/IE 8+ */
+    }
+    .vitamin-container div:first-child {
+      margin-right: 5%;
+      padding: 6px 6px 6px 15px;
+      width: 50%;
+    }
+    .vitamin-container div:nth-child(2) {
+      padding: 6px 15px 6px 6px;
+      width: 45%;
+    }
+    .vitamin-container .gda-nutrient {
+      font-weight: normal;
+    }
+    .vitamin-container .gda-amount {
+      display: none;
+    }
+  
+    /* Selection Section */
+  
+    #selected {
+      margin-top: 30px;
+      box-shadow: 0px 0px 2px 2px rgb(240,240,240);
+      border-radius: 2px;
+      display: table;
+      color: #000;
+      width: 90%;
+      margin-left:18px;
     }
   
     /* X Axis */
@@ -185,17 +259,88 @@
       font-family: sans-serif;
       font-size: 11px;
     }
+  .d3-slider {
+    position: relative;
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 1.1em;
+    border: 1px solid #aaaaaa;
+    z-index: 2;
+    }
+
+
+    .d3-slider-range {
+      background:#2980b9;
+      left:0px;
+      right:0px;
+      height: 0.8em;
+      position: absolute;
+    }
+
+    .d3-slider-range-vertical {
+      background:#2980b9;
+      left:0px;
+      right:0px;
+      position: absolute;
+      top:0;
+    }
+
+    .d3-slider-vertical {
+        width: .8em;
+        height: 100px;
+    }      
+
+    .d3-slider-handle {
+        position: absolute;
+        width: 1.2em;
+        height: 1.2em;
+        border: 1px solid #d3d3d3;
+        border-radius: 4px;
+        background: #eee;
+        background: linear-gradient(to bottom, #eee 0%, #ddd 100%);
+        z-index: 3;
+    }
+
+    .d3-slider-handle:hover {
+        border: 1px solid #999999;
+    }
+
+    .d3-slider-axis {
+        position: relative;
+        z-index: 1;    
+    }
+
+
+    .d3-slider-axis path {
+        stroke-width: 0;
+        fill: none;
+    }
+
+    .d3-slider-axis line {
+        fill: none;
+        stroke: #aaa;
+        shape-rendering: crispEdges;
+    }
+
+    .d3-slider-vertical .d3-slider-handle {
+        left: -8px;
+        margin-left: 0;
+        margin-bottom: -.6em;      
+    }
     </style>
 </head>
 <body>
   <div id="header"><h1>Inside Fruits and Vegetables</h1></div>
   <div id="main-container" class="page-container">
     <div id="menu"></div>
-    <div id="display"></div>
-    <div id="gda"></div>
+    <div id="display">
+      <div id="display-header">Selected Scale: <span id="scale-value"></span></div>
+    </div>
+    <div id="sidebar">
+      <div id="gda-slider"></div>
+      <div id="gda"></div>
+      <div id="selected"></div>
+    </div>
     <div id="overview"></div>
-  </div>
-  <div class="page-container">
     <div id="info">
       <h3>Code Sources:</h3>
       <p>
@@ -222,6 +367,7 @@
 <script src = "getScale.js"></script>
 <script src = "calculateGDA.js"></script>
 <script src = "getOverview.js"></script>
+<script src = "d3.slider.js"></script>
 <script src = "handleSelectedFood.js"></script>
 <script type = "text/javascript">
     
@@ -229,9 +375,9 @@
     var selected_nutrient = "fat";
     var selected_foods = {};
     var colors = {"vegetable" : d3.rgb(82, 84, 163), "fruit" : d3.rgb(181, 207, 107), "nut" : d3.rgb(231, 203, 148)};
-    var nutrients = ["fat", "carbohydrate", "fiber","sugar","protein","sodium","magnesium","calcium","potassium","iron","vitaminA","vitaminC"];
-    var units = ["g", "g", "g","g","g","mg","mg","mg","mg","mg"," IU","mg"];
-    var gda = [65,300,25,90,50,2400,400,1000,4700,18,3000,60];
+    var nutrients = ["fat", "sodium","potassium","calcium","carbohydrate", "fiber","sugar","protein","vitaminA","vitaminC","magnesium","iron"];
+    var units = ["g","mg","mg","mg","g", "g","g","g"," IU","mg","mg","mg"];
+    var gda = [65,2400,4700,1000,300,25,90,50,3000,60,400,18];
   
     // Load JSON data
     d3.json("data.json", function(error, json) {

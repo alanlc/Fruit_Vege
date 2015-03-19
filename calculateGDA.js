@@ -13,13 +13,23 @@ function calculateGDA(data, index, insert) {
   for (var i = 0; i < nutrients.length; i++) {
 
     if (nutrientdata[nutrientkeys[i]] != null){
-      var elem = d3.select("#" + nutrientkeys[i] + "-progress");
-      var oldvalue = elem.selectAll("span");
-      var newvalue = +oldvalue.text().slice(0, - 1) + ((insert ? 1 : -1)
+      var elem = d3.select("#gda-" + nutrientkeys[i]);
+      
+      // Update GDA Percentage and Amount
+      var gdapercent = elem.select(".gda-percentage");
+      var newpc = +gdapercent.attr("value") + ((insert ? 1 : -1)
                         * Math.round((nutrientdata[nutrientkeys[i]] / gda[i]) * 100));
-      elem.style("width", Math.min(scale(newvalue), width) + "px")
-          .style("background-color", "#77DD77");
-      oldvalue.text(newvalue + "%");
+      gdapercent.text(newpc + "%");
+      gdapercent.attr("value", newpc);
+      
+      var gdaamount = elem.select(".gda-amount");
+      var newam = +(+gdaamount.attr("value") + ((insert ? 1 : -1) * nutrientdata[nutrientkeys[i]])).toFixed(2);;
+      gdaamount.text(newam + units[i]);
+      gdaamount.attr("value", newam);
+      
+      
+      elem.style("background-image", "linear-gradient(left, #77DD77, #77DD77 "+newpc+"%, transparent "+newpc+"%, transparent 100%")
+          .style("background-image", "-webkit-linear-gradient(left, #77DD77, #77DD77 "+newpc+"%, transparent "+newpc+"%, transparent 100%");
     }
   }
 }

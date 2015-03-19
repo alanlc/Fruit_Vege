@@ -2,7 +2,8 @@
     {
         "food": "kale",
         "type": "vegetable",
-        "serving": "1 Cup (67g)",
+        "serving": "1 Cup",
+        "cup-weight": "67",
         "nutrients": {
             "fat": 0.5,
             "carbohydrate": 6.7,
@@ -21,7 +22,8 @@
     {
         "food": "spinach",
         "type": "vegetable",
-        "serving": "1 Cup (30g)",
+        "serving": "1 Cup",
+        "cup-weight": "30",
         "nutrients": {
             "fat": 0.1,
             "carbohydrate": 1.1,
@@ -40,7 +42,8 @@
     {
         "food": "lettuce",
         "type": "vegetable",
-        "serving": "1 Cup (47g)",
+        "serving": "1 Cup",
+        "cup-weight": "47",
         "nutrients": {
             "fat": 0.1,
             "carbohydrate": 1.6,
@@ -59,7 +62,8 @@
     {
         "food": "carrot",
         "type": "vegetable",
-        "serving": "1 Cup (128g)",
+        "serving": "1 Cup",
+        "cup-weight": "128",
         "nutrients": {
             "fat": 0.3,
             "carbohydrate": 12.3,
@@ -78,7 +82,8 @@
     {
         "food": "beets",
         "type": "vegetable",
-        "serving": "1 Cup (136g)",
+        "serving": "1 Cup",
+        "cup-weight": "136",
         "nutrients": {
             "fat": 0.2,
             "carbohydrate": 13,
@@ -97,7 +102,8 @@
     {
         "food": "asparagus",
         "type": "vegetable",
-        "serving": "1 Cup (134g)",
+        "serving": "1 Cup",
+        "cup-weight": "134",
         "nutrients": {
             "fat": 0.2,
             "carbohydrate": 5.3,
@@ -116,7 +122,8 @@
     {
         "food": "broccoli",
         "type": "vegetable",
-        "serving": "1 Cup (91g)",
+        "serving": "1 Cup",
+        "cup-weight": "91",
         "nutrients": {
             "fat": 0.3,
             "carbohydrate": 6,
@@ -135,7 +142,8 @@
     {
         "food": "cauliflower",
         "type": "vegetable",
-        "serving": "1 Cup (100g)",
+        "serving": "1 Cup",
+        "cup-weight": "100",
         "nutrients": {
             "fat": 0.1,
             "carbohydrate": 5.3,
@@ -154,7 +162,8 @@
     {
         "food": "cabbage",
         "type": "vegetable",
-        "serving": "1 Cup (89g)",
+        "serving": "1 Cup",
+        "cup-weight": "89",
         "nutrients": {
             "fat": 0.1,
             "carbohydrate": 5.2,
@@ -173,7 +182,8 @@
     {
         "food": "celery",
         "type": "vegetable",
-        "serving": "1 Cup (101g)",
+        "serving": "1 Cup",
+        "cup-weight": "101",
         "nutrients": {
             "fat": 0.2,
             "carbohydrate": 3.5,
@@ -192,7 +202,8 @@
     {
         "food": "zucchini",
         "type": "vegetable",
-        "serving": "1 Cup (124g)",
+        "serving": "1 Cup",
+        "cup-weight": "124",
         "nutrients": {
             "fat": 0.2,
             "carbohydrate": 4.2,
@@ -211,7 +222,8 @@
     {
         "food": "jalapeno",
         "type": "vegetable",
-        "serving": "1 Cup (90g)",
+        "serving": "1 Cup",
+        "cup-weight": "90",
         "nutrients": {
             "fat": 0.6,
             "carbohydrate": 5.6,
@@ -230,7 +242,8 @@
     {
         "food": "brussel-sprouts",
         "type": "vegetable",
-        "serving": "1 Cup (88g)",
+        "serving": "1 Cup",
+        "cup-weight": "88",
         "nutrients": {
             "fat": 0.3,
             "carbohydrate": 7.9,
@@ -249,7 +262,8 @@
     {
         "food": "radish",
         "type": "vegetable",
-        "serving": "1 Cup (116g)",
+        "serving": "1 Cup",
+        "cup-weight": "116",
         "nutrients": {
             "fat": 0.1,
             "carbohydrate": 4.0,
@@ -268,7 +282,8 @@
     {
         "food": "coconut",
         "type": "nut",
-        "serving": "1 Cup (80g)",
+        "serving": "1 Cup",
+        "cup-weight": "80",
         "nutrients": {
             "fat": 26.8,
             "carbohydrate": 12.2,
@@ -287,7 +302,8 @@
     {
         "food": "almond",
         "type": "nut",
-        "serving": "1 Cup (143g)",
+        "serving": "1 Cup",
+        "cup-weight": "143",
         "nutrients": {
             "fat": 70.7,
             "carbohydrate": 31.0,
@@ -306,7 +322,8 @@
     {
         "food": "cashew",
         "type": "nut",
-        "serving": "1 Cup (150g)",
+        "serving": "1 Cup",
+        "cup-weight": "150",
         "nutrients": {
             "fat": 65.7,
             "carbohydrate": 49.1,
@@ -325,7 +342,8 @@
     {
         "food": "hemp-seed",
         "type": "nut",
-        "serving": "1 Cup (120g)",
+        "serving": "1 Cup",
+        "cup-weight": "120",
         "nutrients": {
             "fat": 54.0,
             "carbohydrate": 8.0,
@@ -344,7 +362,8 @@
     {
         "food": "peanut",
         "type": "nut",
-        "serving": "1 Cup (146g)",
+        "serving": "1 Cup",
+        "cup-weight": "146",
         "nutrients": {
             "fat": 72.5,
             "carbohydrate": 31.4,
@@ -363,7 +382,8 @@
     {
         "food": "chestnut",
         "type": "nut",
-        "serving": "1 Cup (145g)",
+        "serving": "1 Cup",
+        "cup-weight": "145",
         "nutrients": {
             "fat": 3.3,
             "carbohydrate": 66.0,
@@ -382,7 +402,8 @@
     {
         "food": "hazelnut",
         "type": "nut",
-        "serving": "1 Cup (115g)",
+        "serving": "1 Cup",
+        "cup-weight": "115",
         "nutrients": {
             "fat": 69.9,
             "carbohydrate": 19.2,
@@ -401,7 +422,8 @@
     {
         "food": "pecan",
         "type": "nut",
-        "serving": "1 Cup (109g)",
+        "serving": "1 Cup",
+        "cup-weight": "109",
         "nutrients": {
             "fat": 78.5,
             "carbohydrate": 15.3,
@@ -420,7 +442,8 @@
     {
         "food": "pistachio",
         "type": "nut",
-        "serving": "1 Cup (123g)",
+        "serving": "1 Cup",
+        "cup-weight": "123",
         "nutrients": {
             "fat": 54.7,
             "carbohydrate": 34.4,
@@ -439,7 +462,8 @@
     {
         "food": "walnut",
         "type": "nut",
-        "serving": "1 Cup (117g)",
+        "serving": "1 Cup",
+        "cup-weight": "117",
         "nutrients": {
             "fat": 76.3,
             "carbohydrate": 16.0,
@@ -458,7 +482,8 @@
     {
         "food": "macadamia",
         "type": "nut",
-        "serving": "1 Cup (134g)",
+        "serving": "1 Cup",
+        "cup-weight": "134",
         "nutrients": {
             "fat": 102,
             "carbohydrate": 19.1,
@@ -477,7 +502,8 @@
     {
         "food": "banana",
         "type": "fruit",
-        "serving": "1 Cup (225g)",
+        "serving": "1 Cup",
+        "cup-weight": "225",
         "nutrients": {
             "fat": 0.74,
             "carbohydrate": 51.4,
@@ -496,7 +522,8 @@
     {
         "food": "date",
         "type": "fruit",
-        "serving": "1 Cup (147g)",
+        "serving": "1 Cup",
+        "cup-weight": "147",
         "nutrients": {
             "fat": 0.6,
             "carbohydrate": 110.0,
@@ -515,26 +542,28 @@
     {
         "food": "mango",
         "type": "fruit",
-        "serving": "1 medium (207g)",
+        "serving": "1 Cup",
+        "cup-weight": "165",
         "nutrients": {
             "fat": 0.6,
-            "carbohydrate": 35.2,
-            "fiber": 3.7,
-            "sugar": 30.6,
-            "protein": 1.1,
-            "sodium": 4.1,
-            "magnesium": 18.6,
-            "calcium": 20.7,
-            "potassium": 323,
+            "carbohydrate": 24.7,
+            "fiber": 2.6,
+            "sugar": 22.5,
+            "protein": 1.4,
+            "sodium": 2,
+            "magnesium": 16,
+            "calcium": 18,
+            "potassium": 277,
             "iron": 0.3,
-            "vitaminA": 1584,
-            "vitaminC": 57.3
+            "vitaminA": 1785,
+            "vitaminC": 60.1
         }
     },
     {
         "food": "pineapple",
         "type": "fruit",
-        "serving": "1 Cup (165g)",
+        "serving": "1 Cup",
+        "cup-weight": "165",
         "nutrients": {
             "fat": 0.2,
             "carbohydrate": 21.6,
@@ -553,7 +582,8 @@
     {
         "food": "grapes",
         "type": "fruit",
-        "serving": "1 Cup (92g)",
+        "serving": "1 Cup",
+        "cup-weight": "92",
         "nutrients": {
             "fat": 0.3,
             "carbohydrate": 15.8,
@@ -572,7 +602,8 @@
     {
         "food": "strawberry",
         "type": "fruit",
-        "serving": "1 Cup (144g)",
+        "serving": "1 Cup",
+        "cup-weight": "144",
         "nutrients": {
             "fat": 0.4,
             "carbohydrate": 11.1,
@@ -591,7 +622,8 @@
     {
         "food": "blueberry",
         "type": "fruit",
-        "serving": "1 Cup (148g)",
+        "serving": "1 Cup",
+        "cup-weight": "148",
         "nutrients": {
             "fat": 0.5,
             "carbohydrate": 21.4,
@@ -610,7 +642,8 @@
     {
         "food": "raspberry",
         "type": "fruit",
-        "serving": "1 Cup (123g)",
+        "serving": "1 Cup",
+        "cup-weight": "123",
         "nutrients": {
             "fat": 0.8,
             "carbohydrate": 14.7,
@@ -629,7 +662,8 @@
     {
         "food": "blackberry",
         "type": "fruit",
-        "serving": "1 Cup (144g)",
+        "serving": "1 Cup",
+        "cup-weight": "144",
         "nutrients": {
             "fat": 0.7,
             "carbohydrate": 14.7,
@@ -648,7 +682,8 @@
     {
         "food": "papaya",
         "type": "fruit",
-        "serving": "1 Cup (140g)",
+        "serving": "1 Cup",
+        "cup-weight": "140",
         "nutrients": {
             "fat": 0.2,
             "carbohydrate": 13.7,
@@ -667,7 +702,8 @@
     {
         "food": "honeydew",
         "type": "fruit",
-        "serving": "1 Cup (170g)",
+        "serving": "1 Cup",
+        "cup-weight": "170",
         "nutrients": {
             "fat": 0.2,
             "carbohydrate": 15.5,
@@ -686,7 +722,8 @@
     {
         "food": "cantaloupe",
         "type": "fruit",
-        "serving": "1 Cup (160g)",
+        "serving": "1 Cup",
+        "cup-weight": "160",
         "nutrients": {
             "fat": 0.3,
             "carbohydrate": 14.1,
@@ -705,7 +742,8 @@
     {
         "food": "watermelon",
         "type": "fruit",
-        "serving": "1 Cup (152g)",
+        "serving": "1 Cup",
+        "cup-weight": "152",
         "nutrients": {
             "fat": 0.2,
             "carbohydrate": 11.5,
@@ -724,7 +762,8 @@
     {
         "food": "avocado",
         "type": "vegetable",
-        "serving": "1 Cup (150g)",
+        "serving": "1 Cup",
+        "cup-weight": "150",
         "nutrients": {
             "fat": 22,
             "carbohydrate": 12.8,
@@ -743,7 +782,8 @@
     {
         "food": "apple",
         "type": "fruit",
-        "serving": "1 Cup (125g)",
+        "serving": "1 Cup",
+        "cup-weight": "125",
         "nutrients": {
             "fat": 0.2,
             "carbohydrate": 17.3,
@@ -762,26 +802,28 @@
     {
         "food": "fig",
         "type": "fruit",
-        "serving": "1 large (64g)",
+        "serving": "1 Cup",
+        "cup-weight": "150",
         "nutrients": {
-            "fat": 0.2,
-            "carbohydrate": 12.3,
-            "fiber": 1.9,
-            "sugar": 10.4,
-            "protein": 0.5,
-            "sodium": 0.6,
-            "magnesium": 10.9,
-            "calcium": 22.4,
-            "potassium": 149,
-            "iron": 0.2,
-            "vitaminA": 90.9,
-            "vitaminC": 1.3
+            "fat": 0.45,
+            "carbohydrate": 28.8,
+            "fiber": 4.4,
+            "sugar": 24.4,
+            "protein": 1.1,
+            "sodium": 1.5,
+            "magnesium": 25.5,
+            "calcium": 52.5,
+            "potassium": 348,
+            "iron": 0.6,
+            "vitaminA": 213,
+            "vitaminC": 3
         }
     },
     {
         "food": "orange",
         "type": "fruit",
-        "serving": "1 Cup (180g)",
+        "serving": "1 Cup",
+        "cup-weight": "180",
         "nutrients": {
             "fat": 0.2,
             "carbohydrate": 21.1,
@@ -800,7 +842,8 @@
     {
         "food": "lemon",
         "type": "fruit",
-        "serving": "1 Cup (212g)",
+        "serving": "1 Cup",
+        "cup-weight": "212",
         "nutrients": {
             "fat": 0.6,
             "carbohydrate": 19.8,
@@ -819,7 +862,8 @@
     {
         "food": "grapefruit",
         "type": "fruit",
-        "serving": "1 Cup (230g)",
+        "serving": "1 Cup",
+        "cup-weight": "230",
         "nutrients": {
             "fat": 0.2,
             "carbohydrate": 18.6,
@@ -838,7 +882,8 @@
     {
         "food": "kiwi",
         "type": "fruit",
-        "serving": "1 Cup (177g)",
+        "serving": "1 Cup",
+        "cup-weight": "177",
         "nutrients": {
             "fat": 0.9,
             "carbohydrate": 25.9,
@@ -857,7 +902,8 @@
     {
         "food": "peach",
         "type": "fruit",
-        "serving": "1 large (175g)",
+        "serving": "1 large",
+        "cup-weight": "175",
         "nutrients": {
             "fat": 0.4,
             "carbohydrate": 17.3,
@@ -876,7 +922,8 @@
     {
         "food": "pomegranate",
         "type": "fruit",
-        "serving": "1/2 medium (141g)",
+        "serving": "1/2 medium",
+        "cup-weight": "141",
         "nutrients": {
             "fat": 1.6,
             "carbohydrate": 26.3,
@@ -895,7 +942,8 @@
     {
         "food": "tomato",
         "type": "vegetable",
-        "serving": "1 Cup (180g)",
+        "serving": "1 Cup",
+        "cup-weight": "180",
         "nutrients": {
             "fat": 0.4,
             "carbohydrate": 7.1,
@@ -914,7 +962,8 @@
     {
         "food": "olive",
         "type": "fruit",
-        "serving": "1 ounce (28g)",
+        "serving": "1 ounce",
+        "cup-weight": "28",
         "nutrients": {
             "fat": 3,
             "carbohydrate": 1.8,
@@ -933,7 +982,8 @@
     {
         "food": "cucumber",
         "type": "vegetable",
-        "serving": "1 Cup (104g)",
+        "serving": "1 Cup",
+        "cup-weight": "104",
         "nutrients": {
             "fat": 0.2,
             "carbohydrate": 3.8,

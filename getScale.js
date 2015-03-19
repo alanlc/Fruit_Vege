@@ -40,6 +40,9 @@ function getScale(data, svg, scaleSelection) {
       function(d) { return d + units[nutrients.indexOf(scaleSelection)]; }
     );
     
+    // Set scale value
+    d3.select("#scale-value").text(scaleSelection.charAt(0).toUpperCase() + scaleSelection.slice(1));
+  
     var randY = d3.random.normal(0, 50);
     var foci = [];
     
