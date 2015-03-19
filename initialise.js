@@ -8,10 +8,7 @@ function initialise(data, svg) {
         .classed("hidden", true);
   
   // Create GDA fulfillment box
-  var gda = d3.select("#GDA")
-        .append("div")
-        .attr("class", "gda")
-        .text("Guidline Amount Fulfillment");
+  var gda = d3.select("#gda");
   
   // Create the selection menu, defailed info box, GDA fulfillment box
   for (var i = 0; i < nutrients.length; i++) {

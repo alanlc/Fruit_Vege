@@ -8,16 +8,30 @@
     * {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
-    
+    body {
+      background-color: #fff;
+      margin: 0px;
+    }
     /* Main HTML sections */
     #header {
-      font-size: 36px;
-      margin: 12px;
+      height: 55px;
+      margin: 0px;
+    }
+    #header h1 {
       text-align: center;
+      padding-top: 25px;
+      margin: 0px;
+      color: #212121;
     }
     #container {
-      display: inline-block;
-      width: 100%;
+      min-width: 600px;
+      width: 90%;
+      margin: auto;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #FFF;
+      box-shadow: 0px 0px 5px 1px #ccc;
+      border-radius: 2px;
     }
     #display {
       display:inline-block;
@@ -125,9 +139,7 @@
     }
   
     /* GDA Section */
-    
-    .gda
-    {
+    #gda {
         font-size: 15px;
         width: 200px;
         display: table;
@@ -137,9 +149,7 @@
         color: #000;
         border: 1px solid;
     }
-    
-    .gda-nutrient
-    {
+    .gda-nutrient {
         font-size: 12px;
         margin: 2px;
         width: 105px;
@@ -165,37 +175,38 @@
       font-family: sans-serif;
       font-size: 11px;
     }
-
     </style>
 </head>
 <body>
-  <div id="header">Inside Fruits and Vegetables</div>
+  <div id="header"><h1>Inside Fruits and Vegetables</h1></div>
   <div id="container">
     <div id="menu"></div>
     <div id="display"></div>
-    <div id="GDA"></div>
+    <div id="gda"></div>
     <div id="selected"></div>
     <div id="overview"></div>
   </div>
-  <div id="info">
-    <h3>Code Sources:</h3>
-    <p>
-        <a href="http://bl.ocks.org/mbostock/3231298" target="_blank">Collision Detection</a><br>
-        <a href="http://bl.ocks.org/mbostock/1748247" target="_blank">Force Clustering</a><br>
-        <a href="http://bl.ocks.org/mbostock/3680957" target="_blank">SVG Semantic Zooming</a><br>
-    </p>
-    <h3>Data Sources:</h3>
-    <p>
-        <a href="http://www.health-alternatives.com/fruit-nutrition-chart.html" target="_blank">Fruit Nutrition Data</a><br>
-        <a href="http://www.health-alternatives.com/vegetables-nutrition-chart.html" target="_blank">Vegetable Nutrition Data</a><br>
-    </p>
-    <h4>Group Members:</h4>
-    <ul><li>Alan Chan</li>
-        <li>Samuel Toussaint</li>
-        <li>Zachary Diebold</li>
-    </ul>
-    <h4>Class Info:</h4>
-    <p>CMPS165 - Data Programming for Visualization<br />Winter 2015 - Suresh K. Lodha</p>
+  <div id="container">
+    <div id="info">
+      <h3>Code Sources:</h3>
+      <p>
+          <a href="http://bl.ocks.org/mbostock/3231298" target="_blank">Collision Detection</a><br>
+          <a href="http://bl.ocks.org/mbostock/1748247" target="_blank">Force Clustering</a><br>
+          <a href="http://bl.ocks.org/mbostock/3680957" target="_blank">SVG Semantic Zooming</a><br>
+      </p>
+      <h3>Data Sources:</h3>
+      <p>
+          <a href="http://www.health-alternatives.com/fruit-nutrition-chart.html" target="_blank">Fruit Nutrition Data</a><br>
+          <a href="http://www.health-alternatives.com/vegetables-nutrition-chart.html" target="_blank">Vegetable Nutrition Data</a><br>
+      </p>
+      <h4>Group Members:</h4>
+      <ul><li>Alan Chan</li>
+          <li>Samuel Toussaint</li>
+          <li>Zachary Diebold</li>
+      </ul>
+      <h4>Class Info:</h4>
+      <p>CMPS165 - Data Programming for Visualization<br />Winter 2015 - Suresh K. Lodha</p>
+    </div>
   </div>
 </body>
 <script src = "initialise.js"></script>

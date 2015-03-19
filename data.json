@@ -54,7 +54,7 @@
         }
     },
     {
-        "food": "carrots",
+        "food": "carrot",
         "serving": "1 Cup (128g)",
         "nutrients": {
             "fat": 0.3,
@@ -234,7 +234,7 @@
         }
     },
     {
-        "food": "radishes",
+        "food": "radish",
         "serving": "1 Cup (116g)",
         "nutrients": {
             "fat": 0.1,
@@ -270,7 +270,7 @@
         }
     },
     {
-        "food": "almonds",
+        "food": "almond",
         "serving": "1 Cup (143g)",
         "nutrients": {
             "fat": 70.7,
@@ -288,7 +288,7 @@
         }
     },
     {
-        "food": "cashews",
+        "food": "cashew",
         "serving": "1 Cup (150g)",
         "nutrients": {
             "fat": 65.7,
@@ -306,7 +306,7 @@
         }
     },
     {
-        "food": "hemp-seeds",
+        "food": "hemp-seed",
         "serving": "1 Cup (120g)",
         "nutrients": {
             "fat": 54.0,
@@ -324,7 +324,7 @@
         }
     },
     {
-        "food": "peanuts",
+        "food": "peanut",
         "serving": "1 Cup (146g)",
         "nutrients": {
             "fat": 72.5,
@@ -342,7 +342,7 @@
         }
     },
     {
-        "food": "chestnuts",
+        "food": "chestnut",
         "serving": "1 Cup (145g)",
         "nutrients": {
             "fat": 3.3,
@@ -360,7 +360,7 @@
         }
     },
     {
-        "food": "hazelnuts",
+        "food": "hazelnut",
         "serving": "1 Cup (115g)",
         "nutrients": {
             "fat": 69.9,
@@ -378,7 +378,7 @@
         }
     },
     {
-        "food": "pecans",
+        "food": "pecan",
         "serving": "1 Cup (109g)",
         "nutrients": {
             "fat": 78.5,
@@ -396,7 +396,7 @@
         }
     },
     {
-        "food": "pistachios",
+        "food": "pistachio",
         "serving": "1 Cup (123g)",
         "nutrients": {
             "fat": 54.7,
@@ -451,38 +451,38 @@
     },
     {
         "food": "banana",
-        "serving": "1 large (136g)",
+        "serving": "1 Cup (225g)",
         "nutrients": {
-            "fat": 0.4,
-            "carbohydrate": 31.1,
-            "fiber": 3.5,
-            "sugar": 16.6,
-            "protein": 1.5,
-            "sodium": 1.4,
-            "magnesium": 36.7,
-            "calcium": 6.8,
-            "potassium": 487,
-            "iron": 0.4,
-            "vitaminA": 87,
-            "vitaminC": 11.8
+            "fat": 0.74,
+            "carbohydrate": 51.4,
+            "fiber": 5.8,
+            "sugar": 27.5,
+            "protein": 2.5,
+            "sodium": 2,
+            "magnesium": 61,
+            "calcium": 11,
+            "potassium": 806,
+            "iron": 0.6,
+            "vitaminA": 144,
+            "vitaminC": 19.6
         }
     },
     {
         "food": "date",
-        "serving": "1/2 Cup (72g)",
+        "serving": "1 Cup (147g)",
         "nutrients": {
-            "fat": 1.2,
-            "carbohydrate": 54.0,
-            "fiber": 4.8,
-            "sugar": 48,
-            "protein": 1.2,
-            "sodium": 0.6,
-            "magnesium": 39,
-            "calcium": 46.2,
-            "potassium": 501,
-            "iron": 0.6,
-            "vitaminA": 107.4,
-            "vitaminC": 0.0
+            "fat": 0.6,
+            "carbohydrate": 110.0,
+            "fiber": 12,
+            "sugar": 93,
+            "protein": 3.6,
+            "sodium": 3,
+            "magnesium": 63,
+            "calcium": 57,
+            "potassium": 964,
+            "iron": 1.5,
+            "vitaminA": 15,
+            "vitaminC": 0.6
         }
     },
     {
