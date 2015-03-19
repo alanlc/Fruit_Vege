@@ -192,6 +192,9 @@
       margin-bottom: 70px;
       height: 195px;
     }
+    #gda-fat .gda-nutrient{
+      color: #ff0000;      
+    }
     .gda-header {
         padding: 12px;
         font-size: 18px;

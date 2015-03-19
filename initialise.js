@@ -76,6 +76,8 @@ function initialise(data, svg) {
       
       // Set all backgrounds to default
       d3.selectAll(".gda-nutrient")
+        .transition()
+        .duration(100)
         .style("color", "#000");
 
       // Set selected box to highlighted color
