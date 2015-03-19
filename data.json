@@ -583,7 +583,7 @@
         "food": "grapes",
         "type": "fruit",
         "serving": "1 Cup",
-        "cup-weight": "92g",
+        "cup-weight": "92",
         "nutrients": {
             "fat": 0.3,
             "carbohydrate": 15.8,
