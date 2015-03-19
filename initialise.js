@@ -11,7 +11,7 @@ function initialise(data, svg) {
   var gda = d3.select("#gda");
   gda.append("div")
         .attr("class", "gda-header")
-        .text("Recommended Nutrition");
+        .text("Nutritional Overview");
   gda.append("div")
       .attr("class", "gda");
   gda.append("div")

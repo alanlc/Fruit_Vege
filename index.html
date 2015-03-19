@@ -19,6 +19,13 @@
     </div>
     <div id="overview"></div>
     <div id="info">
+      <h3>Overview</h3>
+      <p>
+        The foods are arranged on a scale.<br>
+        Slide the vertical slider on the right to select the scale on which the foods are placed.<br>
+        Scroll with the middle mouse wheel to zoom in and out of the scale. You can also drag to the left and right to move the scale along.
+      </p>
+        
       <h3>Code Sources:</h3>
       <p>
           <a href="http://bl.ocks.org/mbostock/3231298" target="_blank">Collision Detection</a><br>
@@ -54,6 +61,7 @@
     var nutrients = ["fat", "sodium","potassium","calcium","carbohydrate", "fiber","sugar","protein","vitaminA","vitaminC","magnesium","iron"];
     var units = ["g","mg","mg","mg","g", "g","g","g"," IU","mg","mg","mg"];
     var gda = [65,2400,4700,1000,300,25,90,50,3000,60,400,18];
+    
   
     // Load JSON data
     d3.json("data.json", function(error, json) {

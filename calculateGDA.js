@@ -8,7 +8,7 @@ function calculateGDA(data, index, insert) {
 
     if (nutrientdata[nutrientkeys[i]] != null){
       var elem = d3.select("#gda-" + nutrientkeys[i]);
-      console.log(nutrientkeys[i] + " " + nutrientdata[nutrientkeys[i]] + " " +gda[i]);
+      
       // Update GDA Percentage and Amount
       var gdapercent = elem.select(".gda-percentage");
       var newpc = +gdapercent.attr("value") + ((insert ? 1 : -1)
